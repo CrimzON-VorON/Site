@@ -31,16 +31,21 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(snowInterval);
             snowContainer.innerHTML = ""; // Очищаємо контейнер
             toggleSnowButton.innerText = "❄️ Увімкнути сніг";
+            localStorage.setItem("isSnowing", "false"); // Зберігаємо стан у localStorage
         } else {
             snowInterval = setInterval(createSnowflake, 550); // Кожні 550 мс додаємо сніжинку
             toggleSnowButton.innerText = "❄️ Вимкнути сніг";
+            localStorage.setItem("isSnowing", "true"); // Зберігаємо стан у localStorage
         }
         isSnowing = !isSnowing;
     }
 
+    // Перевіряємо стан снігу при завантаженні сторінки
+    const savedState = localStorage.getItem("isSnowing");
+    if (savedState === "true") {
+        toggleSnow(); // Увімкнути сніг, якщо він був увімкнений
+    }
+
     // Слухач подій для кнопки
     toggleSnowButton.addEventListener("click", toggleSnow);
-
-    // Вмикаємо сніг відразу після завантаження сторінки
-    toggleSnow();
 });
