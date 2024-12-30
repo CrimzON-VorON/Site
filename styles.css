@@ -3346,7 +3346,7 @@ body {
     min-width: 700px;
 }
 .my-shinob img {
-    height: 200px;
+    height: 340px;
 }
 .my-shinob img:hover {
     transform: scale(1.8);
@@ -3385,7 +3385,7 @@ body {
     transition: all 5s;
 }
 .Brunhildra img{
-    width: 400px;
+    width: 390px;
 }
 .BrunhildraB img{
     width: 400px;
