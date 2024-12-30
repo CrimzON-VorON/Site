@@ -2830,7 +2830,7 @@ body, html {
     flex-wrap: wrap; /* Дозволяє переходити на новий рядок */
     gap: 13px; /* Відстань між блоками */
     justify-content: center; /* Центруємо вміст */
-    align-items: flex-start;
+    align-items: center;
     border: 2px solid orange;
     border-radius: 10px;
     padding: 20px;
@@ -2838,7 +2838,6 @@ body, html {
     width: 100%; /* Автоматично підганяє ширину під вміст */
     height: fit-content; /* Автоматично підганяє висоту під вміст */
     margin: 20px auto; /* Центрування по горизонталі */
-
 }
 
 
@@ -3115,6 +3114,17 @@ body {
     width: 100%; /* Ширина контейнера */
     margin-bottom: 20px; /* Відстань між заголовком і контейнером */
 }
+.favourite-container4 {
+    position: relative; /* Встановлюємо позицію для абсолютного позиціювання заголовка */
+    width: 100%; /* Ширина контейнера */
+    margin-bottom: 20px; /* Відстань між заголовком і контейнером */
+}
+
+.favourite-container5 {
+    position: relative; /* Встановлюємо позицію для абсолютного позиціювання заголовка */
+    width: 100%; /* Ширина контейнера */
+    margin-bottom: 20px; /* Відстань між заголовком і контейнером */
+}
 .favourite-title {
     position: absolute; /* Абсолютне позиціювання заголовка */
     border: 2px solid orange;
@@ -3157,6 +3167,35 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легка тінь для виділення */
     color: white;
 }
+.favourite-title4 {
+    position: absolute; /* Абсолютне позиціювання заголовка */
+    border: 2px solid darkgrey;
+    margin-top: -1px;
+    left: 50%; /* Центруємо по горизонталі */
+    transform: translateX(-50%); /* Центрування за допомогою зміщення */
+    backdrop-filter: blur(10px);
+    padding: 5px 10px; /* Внутрішній відступ для заголовка */
+    border-radius: 10px; /* Згладжені кути */
+    font-size: 22px; /* Розмір шрифту заголовка */
+    color: #333; /* Колір тексту */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легка тінь для виділення */
+    color: white;
+}
+
+.favourite-title5 {
+    position: absolute; /* Абсолютне позиціювання заголовка */
+    border: 2px solid lime;
+    margin-top: -1px;
+    left: 50%; /* Центруємо по горизонталі */
+    transform: translateX(-50%); /* Центрування за допомогою зміщення */
+    backdrop-filter: blur(10px);
+    padding: 5px 10px; /* Внутрішній відступ для заголовка */
+    border-radius: 10px; /* Згладжені кути */
+    font-size: 22px; /* Розмір шрифту заголовка */
+    color: #333; /* Колір тексту */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легка тінь для виділення */
+    color: white;
+}
 .favourite2 {
     display: flex;
     flex-wrap: wrap; /* Дозволяє переходити на новий рядок */
@@ -3178,6 +3217,34 @@ body {
     justify-content: center; /* Центруємо вміст */
     align-items: flex-start;
     border: 2px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Враховує відступи всередині контейнера */
+    width: 100%; /* Автоматично підганяє ширину під вміст */
+    height: fit-content; /* Автоматично підганяє висоту під вміст */
+    margin: 20px auto; /* Центрування по горизонталі */
+}
+.favourite4 {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє переходити на новий рядок */
+    gap: 13px; /* Відстань між блоками */
+    justify-content: center; /* Центруємо вміст */
+    align-items: flex-start;
+    border: 2px solid darkgrey;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Враховує відступи всередині контейнера */
+    width: 100%; /* Автоматично підганяє ширину під вміст */
+    height: fit-content; /* Автоматично підганяє висоту під вміст */
+    margin: 20px auto; /* Центрування по горизонталі */
+}
+.favourite5 {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє переходити на новий рядок */
+    gap: 13px; /* Відстань між блоками */
+    justify-content: center; /* Центруємо вміст */
+    align-items: flex-start;
+    border: 2px solid lime;
     border-radius: 10px;
     padding: 20px;
     box-sizing: border-box; /* Враховує відступи всередині контейнера */
@@ -3398,4 +3465,16 @@ body {
     margin-bottom: 14px;
     margin-right: -14px;
     pointer-events: none;
+}
+.p_text_media {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 5px;
+    margin-bottom: -2px;
 }
