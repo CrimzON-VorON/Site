@@ -3489,3 +3489,59 @@ body {
     padding: 5px;
     margin-bottom: -2px;
 }
+
+/* building вспливаюче вікно *//* building вспливаюче вікно *//* building вспливаюче вікно *//* building вспливаюче вікно */
+#popup-overlay-building {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999999999999999999;
+        }
+
+        /* Стилі для самого вікна */
+        #popup-building {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            z-index: 999;
+        }
+
+        #popup-building img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            z-index: 999;
+        }
+
+        #popup-building button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        #popup-building button:hover {
+            background-color: #0056b3;
+            z-index: 999;
+        }
+/* building вспливаюче вікно *//* building вспливаюче вікно *//* building вспливаюче вікно *//* building вспливаюче вікно */
+
+.version_bottom {
+    margin-left: 900px;
+    position: absolute;
+    color: dimgrey;
+}

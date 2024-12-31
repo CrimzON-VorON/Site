@@ -49,3 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Слухач подій для кнопки
     toggleSnowButton.addEventListener("click", toggleSnow);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+            const popupOverlay = document.getElementById("popup-overlay-building");
+            const closePopupButton = document.getElementById("close-popup-building");
+
+            // Показуємо вікно при завантаженні сторінки
+            popupOverlay.style.display = "flex";
+
+            // Закриваємо вікно при натисканні на кнопку
+            closePopupButton.addEventListener("click", () => {
+                popupOverlay.style.display = "none";
+            });
+        });
