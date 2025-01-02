@@ -2804,7 +2804,7 @@ body, html {
 .back_to_watch {
     top: 2px;
     left: 20px;
-    position: relative;
+    position: absolute;
     font-family: fantasy;
     text-decoration: unset;
     color: peachpuff;
@@ -2883,12 +2883,16 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     position: sticky;
-    margin-top: 5px;
     top: 0;
     z-index: 10000000000000;
     backdrop-filter: blur(10px);
     transition: position 0.3s, top 0.3s;
     background-color: midnightblue;
+    overflow: visible;
+    min-height: 40px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .fixed {
@@ -2906,15 +2910,17 @@ body {
 
 
 .rating_line {
-    margin-left: 10%;
     right: 0;
+    top: 0;
     width: 94%;
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
+    position: relative;
     justify-content: center;
     align-items: center;
+    overflow: visible; 
+    margin-left: 5%;
 }
 .rating1 {
     right: 5px; /* Відступ справа */
@@ -3013,9 +3019,11 @@ body {
     min-height: 5px;
 }
 .rating_words {
-    background-color: lightgray;
     font-size: 22px;
-    margin-right: 7px;
+    margin-right: 8px;
+    color: white;
+    height: auto;
+    width: auto;
 }
 /* Ефект при наведенні на .movies_boxes */
 [class^="movies_boxes"]:hover {
@@ -3293,6 +3301,13 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 55%;
+    overflow: hidden;
+}
+.hidden-specs img {
+    max-width: 100%; /* Зображення не виходить за межі контейнера */
+    height: auto; /* Пропорційно змінює висоту */
+    display: block; /* Забезпечує коректне розташування */
+    margin: 0 auto; /* Центрування зображення */
 }
 .specs_h1 {
     display: flex;
@@ -3326,7 +3341,7 @@ body {
 .center_word_specs {
     font-size: 20px;
     margin-bottom: 20px;
-    margin-top: -5px;
+    margin-top: 5px;
 }
 .f12345 {
     display: flex;
@@ -3335,15 +3350,12 @@ body {
 }
 .f12345 img {
     height: 400px;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    display: inline-block;
 }
 .specs_image img {
-    height: auto;
-    width: auto;
-    max-height: 600px;
-    min-width: 700px;
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto;
 }
 .my-shinob img {
     height: 340px;
