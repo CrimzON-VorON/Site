@@ -2731,7 +2731,7 @@ body, html {
     padding-bottom: 20px;
     flex-wrap: wrap;
     flex-grow: 1;
-    flex-basis: 300px;
+    flex-basis: 400px;
 }}
 /* Загальний стиль для контейнера */
 .media_box {
