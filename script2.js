@@ -63,3 +63,51 @@ document.addEventListener("DOMContentLoaded", () => {
                 popupOverlay.style.display = "none";
             });
         });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = [
+        { titleClass: ".favourite-title", blockClass: ".favourite" },
+        { titleClass: ".favourite-title5", blockClass: ".favourite5" },
+        { titleClass: ".favourite-title2", blockClass: ".favourite2" },
+        { titleClass: ".favourite-title3", blockClass: ".favourite3" },
+        { titleClass: ".favourite-title4", blockClass: ".favourite4" },
+    ];
+
+    // Завантажуємо стан блоків із localStorage
+    sections.forEach(({ titleClass, blockClass }) => {
+        const titleElement = document.querySelector(titleClass);
+        const contentBlock = document.querySelector(blockClass);
+
+        if (contentBlock) {
+            const isHidden = localStorage.getItem(blockClass) === "hidden";
+            if (isHidden) {
+                contentBlock.classList.add("hidden");
+                if (titleElement) {
+                    titleElement.textContent = titleElement.textContent.replace("Сховати", "Показати");
+                }
+            }
+        }
+    });
+
+    // Додаємо обробники подій для кожного заголовка
+    sections.forEach(({ titleClass, blockClass }) => {
+        const titleElement = document.querySelector(titleClass);
+        const contentBlock = document.querySelector(blockClass);
+
+        if (titleElement && contentBlock) {
+            titleElement.addEventListener("click", () => {
+                if (contentBlock.classList.contains("hidden")) {
+                    contentBlock.classList.remove("hidden");
+                    titleElement.textContent = titleElement.textContent.replace("Показати", "Сховати");
+                    localStorage.setItem(blockClass, "visible");
+                } else {
+                    contentBlock.classList.add("hidden");
+                    titleElement.textContent = titleElement.textContent.replace("Сховати", "Показати");
+                    localStorage.setItem(blockClass, "hidden");
+                }
+            });
+        }
+    });
+});
+
