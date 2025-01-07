@@ -36,6 +36,7 @@
 
 <div class="favourite-container">
     <h2 class="favourite-title">Улюблені🔻</h2>
+    <button class="sort_list" id="sort_list" onclick="sortMediaByName()">🆎</button>
     <div class="favourite">
         <div class="movies_boxes562" onclick="openMediaPopup('media_popup562')">
             <img src="../../Ressources/img/manga/Berserk.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -79,6 +80,7 @@
 
 <div class="favourite-container5">
     <h2 class="favourite-title5">Читаю🔻</h2>
+    <button class="sort_list" id="sort_list5" onclick="sortWatchingMoviesByName()">🆎</button>
     <div class="favourite5">
         <div class="movies_boxes563" onclick="openMediaPopup('media_popup563')">
             <img src="../../Ressources/img/manga/One_Punch-Man.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -116,6 +118,8 @@
 
 <div class="favourite-container2">
     <h2 class="favourite-title2">Заплановано🔻</h2>
+    <input type="text" id="searchInput2" placeholder="Пошук..." class="search-input" onkeyup="filterPlannedMovies()">
+    <button class="sort_list" id="sort_list2" onclick="sortPlannedMoviesByName()">🆎</button>
     <div class="favourite2">
         <div class="movies_boxes558" onclick="openMediaPopup('media_popup558')">
             <img src="../../Ressources/img/manga/Ana_Satsujin.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -315,6 +319,9 @@
 
 <div class="favourite-container3">
     <h2 class="favourite-title3">Прочитано🔻</h2>
+    <input type="text" id="searchInput3" placeholder="Пошук..." class="search-input" onkeyup="filterWatchedMovies()">
+    <button class="sort_list" id="sort_list3" onclick="sortWatchedMoviesByName()">🆎</button>
+     <button class="sort_rating" id="sort_rating3" onclick="sortWatchedMoviesByRating()">⭐</button>
     <div class="favourite3">
         <div class="movies_boxes526" onclick="openMediaPopup('media_popup526')">
             <img src="../../Ressources/img/manga/KenganAshura0.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -700,7 +707,58 @@
 
 <div class="favourite-container4">
     <h2 class="favourite-title4">Забросив🔻</h2>
+    <input type="text" id="searchInput4" placeholder="Пошук..." class="search-input" onkeyup="filterMovies()">
+    <button class="sort_list" id="sort_list4" onclick="sortAbandonedMoviesByName()">🆎</button>
+    <button class="sort_rating" id="sort_rating4" onclick="sortAbandonedMoviesByRating()">⭐</button>
     <div class="favourite4">
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Monster Musume no Iru Nichijou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">73/87~ глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Повсякденне життя з дівчиною-монстром</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Dragon's Dogma Revives.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">0/10 глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Догма дракона: Відродження</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Rosario to Vampire.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">0/40 глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Розаріо + Вампір</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Komi-san wa, Comyushou desu..webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">16/492~ глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">У Комі проблеми зі спілкуванням</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Kono Subarashii Sekai ni Shukufuku wo!.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">10/123~ глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Коносуба</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Bakemonogatari.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">7/193 глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Гатарі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Ookami to Koushinryou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">3/108 глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Вовчиця та прянощі</p>
+        </div>
+        <div class="movies_boxes464" onclick="openMediaPopup('media_popup463')">
+            <img src="../../Ressources/img/manga/Pandora Hearts.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">45/107 глав</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Серця Пандори</p>
+        </div>
         <div class="movies_boxes463" onclick="openMediaPopup('media_popup463')">
             <img src="../../Ressources/img/manga/Chichi_Chichi.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="pages_manga">10/111~ глав</div>
@@ -832,9 +890,9 @@
     
 <div class="image_float">
     <img src="../../Ressources/img/Shinob.gif" alt="Опис картинки">
-    <div class="santa">
+    <!-- <div class="santa">
     <img src="../../Ressources/img/santa.webp" alt="Опис картинки">
-    </div>
+    </div> !-->
 </div>
 <div class="image_float_cloud">
     <img src="../../Ressources/img/cloud.png" alt="Опис картинки">

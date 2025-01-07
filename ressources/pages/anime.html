@@ -32,7 +32,7 @@
     </div>
 </div>
 
- <div id="popup-overlay-building">
+ <!-- <div id="popup-overlay-building">
         <div id="popup-building">
             <img src="https://media1.tenor.com/m/IPkZqclH7vgAAAAd/anime-hammer.gif" alt="Картинка">
             <h3 class="h3">Хей, ця сторінка ще в роботі!</h3>
@@ -45,27 +45,406 @@
 
 <div class="favourite-container">
     <h2 class="favourite-title">Улюблені🔻</h2>
+    <button class="sort_list" id="sort_list" onclick="sortMediaByName()">🆎</button>
     <div class="favourite">
 
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kizumonogatari III.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Історії ран. Частина 3: Холодна кров</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Grappler Baki (TV).webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">24 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Боєць Бакі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Hajime no Ippo.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">75 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Перший крок</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Bleach.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">366 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Бліч</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ookami to Koushinryou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Вовчиця та прянощі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kobayashi-san Chi no Maid Dragon.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating1"></div>
+        <p class="p_text_media">Дракон-горнічна госпожи Кобаяши</p>
+        </div>
 </div>
 </div>
 
 <div class="favourite-container5">
     <h2 class="favourite-title5">Дивлюся🔻</h2>
+    <input type="text" id="searchInput5" placeholder="Пошук..." class="search-input" onkeyup="filterWatchingMovies()">
+    <button class="sort_list" id="sort_list5" onclick="sortWatchingMoviesByName()">🆎</button>
     <div class="favourite5">
 
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Sousou no Frieren.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">22/28 серій</div>
+            <div class="rating2"></div>
+        <p class="p_text_media">Фрірен</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Steins;Gate.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">9/24 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Врата Штейна</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/One Piece.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">298/1122~ серій</div>
+            <div class="rating2"></div>
+        <p class="p_text_media">Ван Піс</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Mahoutsukai no Yome.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">15/24 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Наречена Чародія</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Pokemon.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">64/276 серій (+1)</div>
+            <div class="rating2"></div>
+        <p class="p_text_media">Покемон</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Arifureta Shokugyou de Sekai Saikyou 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Аріфуета: Найсильніший ремісник у світі 2</p>
+        </div>
 </div>
 </div>
 
 <div class="favourite-container2">
     <h2 class="favourite-title2">Заплановано🔻</h2>
+    <input type="text" id="searchInput2" placeholder="Пошук..." class="search-input" onkeyup="filterPlannedMovies()">
+    <button class="sort_list" id="sort_list2" onclick="sortPlannedMoviesByName()">🆎</button>
     <div class="favourite2">
-
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Jujutsu Kaisen 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">5/23 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Магічна битва 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Penguin Musume♥Heart.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">22 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дівчинка-пінгвін</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Hifuu Katsudou Kiroku.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">? серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Запис діяльності клубу Хіфу: Запечатана езотерична історія</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Oshi no Ko.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">11 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дитина ідола</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Scarlet Nexus.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">26 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Скарлет Нексус</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Mamahaha no Tsurego ga Motokano datta.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дочка моєї мачухи – моя колишня дівчина</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ougon Jidai-hen - Memorial Edition.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Берсерк: Золотий вік - Меморіальне видання</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kengan Ashura Season 2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Кенган Ашура 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Hanma Baki Son of Ogre 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">27 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Бакі - син Великана 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kimetsu no Yaiba Katanakaji no Sato-hen.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">11 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Клинок, що розсікає демонів: Село ковалів</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Josee to Tora to Sakana-tachi.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Жозе, тигр та риба</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Senpai ga Uzai Kouhai no Hanashi.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Мій семпай дратує!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Komi-san wa, Comyushou desu..webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">У Комі проблеми зі спілкуванням</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Jahy-sama wa Kujikenai!.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">20 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Джахи не буде зневірятися!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Aharen-san wa Hakarenai.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Незбагненна Ахарен</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Youjo Senki II.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">? серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Військова хроніка маленької дівчинки 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Vinland Saga Season 2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Сага про Вінланд 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Karakai Jouzu no Takagi-san.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Пустотлива Такагі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Shinryaku! Ika Musume.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Вторгнення Кальмарки</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Chainsaw Man.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Людина-бензопила</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/5-toubun no Hanayome Movie.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">П'ять наречених. Фільм</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Gochuumon wa Usagi desu ka.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Замовляли кролика?</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Nisekoi.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">20 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Удаване кохання</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Bokutachi wa Benkyou ga Dekinai.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Ми не можемо вчитися!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Oshiete! Galko-chan.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Розкажи нам, Гяруко!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Urasekai Picnic.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Пікнік у Потойбіччі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Tamako Market.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Магазинчик Тамако</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Holo no Graffiti.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">150~ серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Граффити Холо</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Sankarea.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Санка Реа</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Haiyore! Nyaruko-san.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Повзучий хаос Няруко-сан!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Mushoku Tensei.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">11 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Реінкарнація безробітного: Історія про пригоди в іншому світі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka IV.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">11 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Може, я зустріну тебе в підземеллі? 4</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Summertime Render.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">25 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Літній час </p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Goblin Slayer II.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Вбивця гоблінів 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Guraburu!.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Великий блюз!</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Blood-C.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Кров-C</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kanojo, Okarishimasu 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дівчина на годину 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Uzaki-chan wa Asobitai! Double.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Удзакі хоче тусуватися! 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Princess Connect! ReDive Season 2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Зв'язок принцес: Повторне занурення 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Alicization - War of Underworld 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">11 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Майстри Меча Онлайн: Алізація — Війна в Підмир'ї 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ijiranaide, Nagatoro-san.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Не знущайся, Нагаторо</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Bleach Sennen Kessen-hen.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Бліч: Тисячолітня кривава війна</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Made in Abyss Retsujitsu no Ougonkyou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Створений у Безодні: Сонце, що спалахнуло у Золотому місті</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/School Days.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Шкільні дні</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/It's My Life.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Це моє життя OVA</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Tate no Yuusha no Nariagari Season 2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">13 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Сходження героя щита 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Tensei shitara Slime Datta Ken 2nd Season.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Про моє переродження в слиз 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kobayashi-san Chi no Maid Dragon S.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дракон-покоївка пані Кобаяші 2</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Higurashi no Naku Koro ni.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">26 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Коли плачуть цикади</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Pandora Hearts.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">25 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Серця Пандори</p>
+        </div>
 </div>
 </div>
 
 <div class="favourite-container3">
     <h2 class="favourite-title3">Проглянуто🔻</h2>
+    <input type="text" id="searchInput3" placeholder="Пошук..." class="search-input">
+    <button class="sort_list" id="sort_list3" onclick="sortWatchedMoviesByName()">🆎</button>
+     <button class="sort_rating" id="sort_rating3" onclick="sortWatchedMoviesByRating()">⭐</button>
     <div class="favourite3">
         <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
             <img src="../../Ressources/img/anime/Roberta's Blood Trail.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -611,7 +990,7 @@
             <img src="../../Ressources/img/anime/Initial D First Stage.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="pages_manga">26 серій</div>
             <div class="rating2"></div>
-        <p class="p_text_media"><Ініціал Ді: Стадія перша/p>
+        <p class="p_text_media">Ініціал Ді: Стадія перша</p>
         </div>
         <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
             <img src="../../Ressources/img/anime/Jin-Rou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
@@ -1216,13 +1595,13 @@
         <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
             <img src="../../Ressources/img/anime/Overlord Movie 2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="pages_manga">1 серій</div>
-            <div class="rating"></div>
+            <div class="rating3"></div>
         <p class="p_text_media">Повелитель: Темний воїтель</p>
         </div>
         <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
             <img src="../../Ressources/img/anime/Overlord Movie 1.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="pages_manga">1 серій</div>
-            <div class="rating"></div>
+            <div class="rating3"></div>
         <p class="p_text_media">Повелитель: Безсмертний король</p>
         </div>
         <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
@@ -2579,6 +2958,110 @@
 </div>
 </div>
 
+<div class="favourite-container4">
+    <h2 class="favourite-title4">Забросив🔻</h2>
+    <input type="text" id="searchInput4" placeholder="Пошук..." class="search-input" onkeyup="filterMovies()">
+    <button class="sort_list" id="sort_list4" onclick="sortAbandonedMoviesByName()">🆎</button>
+    <div class="favourite4">
+        <div class="movies_boxes2" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Boruto Naruto Next Generations.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">12/293 серій</div>
+            <div class="rating4"></div>
+        <p class="p_text_media">Боруто: Нове покоління Наруто</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Pokemon Sun & Moon.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">0/146 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Покемон: Сонце та Місяць</p>
+        </div>
+        <div class="movies_boxes55" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Himouto! Umaru-chan R.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дволична сестричка Умару! 2</p>
+        </div>
+        <div class="movies_boxes23" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Akanesasu Shoujo.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">4/12 серій</div>
+            <div class="rating4"></div>
+        <p class="p_text_media">Akanesasu Shoujo</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Dumbbell Nan Kilo Moteru.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">5/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Наскільки тяжкі гантелі ти зможеш підняти?</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Net-juu no Susume.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/10 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Повноцінне життя онлайн</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Kamigami no Gekirin.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/24 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Сім смертних гріхів: Гнів богів</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Mushishi.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/26 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Майстер Мусі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/ReCreators.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">0/22 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Відроджуючі</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ao no Exorcist.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">22/25 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Синій екзорцист</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/akugan Battle Planet.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">6/50 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Бакуган: Планета битв</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ichiban Ushiro no Daimaou.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Князь темряви із задньої парти</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Girls & Panzer.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">6/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Дівчата та танки</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Murenase! Seton Gakuen.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">3/12 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Вступай у зграю! Школа Сетон</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Selector Destructed WIXOSS Movie.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">0/1 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Селектор: Руйнування "WIXOSS"</p>
+        </div>
+        <div class="movies_boxes" onclick="openMediaPopup('media_popup')">
+            <img src="../../Ressources/img/anime/Ashita no Joe.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+            <div class="pages_manga">1/79 серій</div>
+            <div class="rating"></div>
+        <p class="p_text_media">Завтрашній Джо</p>
+        </div>
+</div>
+</div>
+
 </div>
     <div id="snow-container"></div>
 <button id="toggle-snow" class="snow-toggle">❄️ Увімкнути сніг</button>
@@ -2586,9 +3069,9 @@
     
 <div class="image_float">
     <img src="../../Ressources/img/Shinob.gif" alt="Опис картинки">
-    <div class="santa">
+    <!-- <div class="santa">
     <img src="../../Ressources/img/santa.webp" alt="Опис картинки">
-    </div>
+    </div> !-->
 </div>
 <div class="image_float_cloud">
     <img src="../../Ressources/img/cloud.png" alt="Опис картинки">

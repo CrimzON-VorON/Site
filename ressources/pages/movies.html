@@ -35,35 +35,45 @@
 <div class="media_container">
     
 <div class="favourite-container">
+    <div class="search-container">
     <h2 class="favourite-title">Улюблені🔻</h2>
+    <button class="sort_list" id="sort_list" onclick="sortMediaByName()">🆎</button>
+    </div>
     <div class="favourite">
         <div class="movies_boxes17" onclick="openMediaPopup('media_popup17')">
             <img src="../../Ressources/img/movies/Людина_павук.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Людина павук</p>
         </div>
         <div class="movies_boxes23" onclick="openMediaPopup('media_popup23')">
             <img src="../../Ressources/img/movies/Доктор_Хто.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Доктор Хто</p>
         </div>
         <div class="movies_boxes87" onclick="openMediaPopup('media_popup87')">
             <img src="../../Ressources/img/movies/Смокінг.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Смокінг</p>
         </div>
         <div class="movies_boxes1" onclick="openMediaPopup('media_popup1')">
             <img src="../../Ressources/img/movies/Бійцівський_клуб.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Бійцівський клуб</p>
         </div>
         <div class="movies_boxes222" onclick="openMediaPopup('media_popup222')">
             <img src="../../Ressources/img/movies/Limitless.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Limitless</p>
         </div>    
         <div class="movies_boxes350" onclick="openMediaPopup('media_popup350')">
             <img src="../../Ressources/img/movies/Сайлент_Хілл.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Сайлент Хілл</p>
         </div>
         <div class="movies_boxes359" onclick="openMediaPopup('media_popup359')">
             <img src="../../Ressources/img/movies/Хардкор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating1"></div>
+            <p class="p_text_media">Хардкор</p>
         </div>
 
     </div>
@@ -71,1538 +81,1948 @@
 
 <div class="favourite-container2">
     <h2 class="favourite-title2">Заплановано🔻</h2>
+    <input type="text" id="searchInput2" placeholder="Пошук..." class="search-input" onkeyup="filterPlannedMovies()">
+    <button class="sort_list" id="sort_list2" onclick="sortPlannedMoviesByName()">🆎</button>
     <div class="favourite2">
         <div class="movies_boxes391" onclick="openMediaPopup('media_popup391')">
             <img src="../../Ressources/img/movies/Милий_дім.webp" alt="Опис картинки" class="movie_img" loading="lazy">
             <div class="rating"></div>
+            <p class="p_text_media">Милий дім</p>
         </div>
         <div class="movies_boxes390" onclick="openMediaPopup('media_popup390')">
             <img src="../../Ressources/img/movies/Электра.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+        <div class="rating">
+        </div><p class="p_text_media">Електра</p>
+        </div>
         <div class="movies_boxes389" onclick="openMediaPopup('media_popup389')">
             <img src="../../Ressources/img/movies/Призрак_в_доспехах.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Привид в броні</p>
+        </div>
         <div class="movies_boxes388" onclick="openMediaPopup('media_popup388')">
             <img src="../../Ressources/img/movies/Неуловимые.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Невловимі</p>
+        </div>
         <div class="movies_boxes387" onclick="openMediaPopup('media_popup387')">
             <img src="../../Ressources/img/movies/Гильдия_убийц.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Гільдія Вбивць</p>
+        </div>
         <div class="movies_boxes386" onclick="openMediaPopup('media_popup386')">
             <img src="../../Ressources/img/movies/Левша_2015.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Лівша</p>
+        </div>
         <div class="movies_boxes385" onclick="openMediaPopup('media_popup385')">
             <img src="../../Ressources/img/movies/Запрещённый_приём.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Заборонений прийом</p>
+        </div>
         <div class="movies_boxes384" onclick="openMediaPopup('media_popup384')">
             <img src="../../Ressources/img/movies/Веном_3.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Веном 3</p>
+        </div>
         <div class="movies_boxes383" onclick="openMediaPopup('media_popup383')">
             <img src="../../Ressources/img/movies/Дюна.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Дюна</p>
+        </div>
         <div class="movies_boxes382" onclick="openMediaPopup('media_popup382')">
             <img src="../../Ressources/img/movies/Счастливое_число_Слевина.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Щасливе число Слевіна</p>
+        </div>
         <div class="movies_boxes381" onclick="openMediaPopup('media_popup381')">
             <img src="../../Ressources/img/movies/Достать_ножи.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Дістати ножі</p>
+        </div>
         <div class="movies_boxes381" onclick="openMediaPopup('media_popup381')">
             <img src="../../Ressources/img/movies/Гордость_и_слава.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Гордість та слава</p>
+        </div>
         <div class="movies_boxes380" onclick="openMediaPopup('media_popup380')">
             <img src="../../Ressources/img/movies/28_дней_спустя.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">28 днів по тому</p>
+        </div>
         <div class="movies_boxes379" onclick="openMediaPopup('media_popup379')">
             <img src="../../Ressources/img/movies/Бордерлендс.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Бордерлендс</p>
+        </div>
         <div class="movies_boxes378" onclick="openMediaPopup('media_popup378')">
             <img src="../../Ressources/img/movies/Декстер._Первородный_грех.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Декстер. Первородний гріх</p>
+        </div>
         <div class="movies_boxes377" onclick="openMediaPopup('media_popup377')">
             <img src="../../Ressources/img/movies/Пункт_назначения_поезд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Пункт призначення Поїзд</p>
+        </div>
         <div class="movies_boxes375" onclick="openMediaPopup('media_popup375')">
             <img src="../../Ressources/img/movies/Хранители_часть_1.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Хранителі частина 1</p>
+        </div>
         <div class="movies_boxes374" onclick="openMediaPopup('media_popup374')">
             <img src="../../Ressources/img/movies/Дикий_2023.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Дикий</p>
+        </div>
         <div class="movies_boxes372" onclick="openMediaPopup('media_popup372')">
             <img src="../../Ressources/img/movies/Великий_Гетсби.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Великий Гетсбі</p>
+        </div>
         <div class="movies_boxes371" onclick="openMediaPopup('media_popup371')">
             <img src="../../Ressources/img/movies/Чорна_меса.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating"></div></div>
+                <div class="rating">
+        </div><p class="p_text_media">Чорна меса</p>
+        </div>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     </div>
 </div>
 
 <div class="favourite-container3">
     <h2 class="favourite-title3">Проглянуто🔻</h2>
+    <input type="text" id="searchInput3" placeholder="Пошук..." class="search-input" onkeyup="filterWatchedMovies()">
+    <button class="sort_list" id="sort_list3" onclick="sortWatchedMoviesByName()">🆎</button>
+     <button class="sort_rating" id="sort_rating3" onclick="sortWatchedMoviesByRating()">⭐</button>
     <div class="favourite3">
-
         <div class="movies_boxes376" onclick="openMediaPopup('media_popup376')">
             <img src="../../Ressources/img/movies/Битлджус.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating3"></div></div>
+        <div class="rating3"></div>
+        <p class="p_text_media">Бітлджус</p>
+    </div>
 
         <div class="movies_boxxes370" onclick="openMediaPopup('media_popup370')">
             <img src="../../Ressources/img/movies/New_List.webp" alt="Опис картинки" class="movie_img" loading="lazy">
+    <p class="p_text_media">⠀</p>
         </div>
 
         <div class="movies_boxes1" onclick="openMediaPopup('media_popup1')">
     <img src="../../Ressources/img/movies/Бійцівський_клуб.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Бійцівський клуб</p>
 </div>
 <div class="movies_boxes5" onclick="openMediaPopup('media_popup5')">
     <img src="../../Ressources/img/movies/Назад_в_майбутнє.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Назад в майбутнє</p>
 </div>
 <div class="movies_boxes6" onclick="openMediaPopup('media_popup6')">
     <img src="../../Ressources/img/movies/Шоу_Трумана.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Шоу Трумана</p>
 </div>
 <div class="movies_boxes7" onclick="openMediaPopup('media_popup7')">
     <img src="../../Ressources/img/movies/Термінатор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Термінатор</p>
 </div>
 <div class="movies_boxes8" onclick="openMediaPopup('media_popup8')">
     <img src="../../Ressources/img/movies/Мандалорець.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мандалорець</p>
 </div>
 <div class="movies_boxes9" onclick="openMediaPopup('media_popup9')">
     <img src="../../Ressources/img/movies/Зоряні_війні.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Зоряні війні</p>
 </div>
 <div class="movies_boxes10" onclick="openMediaPopup('media_popup10')">
     <img src="../../Ressources/img/movies/Американський_психопат.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Американський психопат</p>
 </div>
 <div class="movies_boxes11" onclick="openMediaPopup('media_popup11')">
     <img src="../../Ressources/img/movies/П'ятий_елемент.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">П'ятий елемент</p>
 </div>
 <div class="movies_boxes12" onclick="openMediaPopup('media_popup12')">
     <img src="../../Ressources/img/movies/Гра(1997).webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Гра</p>
 </div>
 <div class="movies_boxes13" onclick="openMediaPopup('media_popup13')">
     <img src="../../Ressources/img/movies/Вартові_Галактики.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Вартові Галактики</p>
 </div>
 <div class="movies_boxes14" onclick="openMediaPopup('media_popup14')">
     <img src="../../Ressources/img/movies/Безславні_виродки.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Безславні виродки</p>
 </div>
 <div class="movies_boxes15" onclick="openMediaPopup('media_popup15')">
     <img src="../../Ressources/img/movies/Сам_вдома.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Сам вдома</p>
 </div>
 <div class="movies_boxes16" onclick="openMediaPopup('media_popup16')">
     <img src="../../Ressources/img/movies/Гаррі_Поттер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Гаррі Поттер</p>
 </div>
 <div class="movies_boxes17" onclick="openMediaPopup('media_popup17')">
     <img src="../../Ressources/img/movies/Людина_павук.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Людина павук</p>
 </div>
 <div class="movies_boxes18" onclick="openMediaPopup('media_popup18')">
     <img src="../../Ressources/img/movies/Пірати_Карибського_моря.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Пірати Карибського моря</p>
 </div>
 <div class="movies_boxes19" onclick="openMediaPopup('media_popup19')">
     <img src="../../Ressources/img/movies/Джентльмени.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Джентльмени</p>
 </div>
 <div class="movies_boxes20" onclick="openMediaPopup('media_popup20')">
     <img src="../../Ressources/img/movies/Джентльмени2.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Джентльмени</p>
 </div>
 <div class="movies_boxes21" onclick="openMediaPopup('media_popup21')">
     <img src="../../Ressources/img/movies/Люди_в_чорному.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Люди в чорному</p>
 </div>
 <div class="movies_boxes22" onclick="openMediaPopup('media_popup22')">
     <img src="../../Ressources/img/movies/Еффект_метелика.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Еффект метелика</p>
 </div>
 <div class="movies_boxes23" onclick="openMediaPopup('media_popup23')">
     <img src="../../Ressources/img/movies/Доктор_Хто.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Доктор Хто</p>
 </div>
 <div class="movies_boxes24" onclick="openMediaPopup('media_popup24')">
     <img src="../../Ressources/img/movies/Форрест_Гамп.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Форрест Гамп</p>
 </div>
 <div class="movies_boxes25" onclick="openMediaPopup('media_popup25')">
     <img src="../../Ressources/img/movies/Зелена_Миля.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Зелена Миля</p>
 </div>
 <div class="movies_boxes26" onclick="openMediaPopup('media_popup26')">
     <img src="../../Ressources/img/movies/Джокер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Джокер</p>
 </div>
 <div class="movies_boxes27" onclick="openMediaPopup('media_popup27')">
     <img src="../../Ressources/img/movies/Месники.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Месники</p>
 </div>
 <div class="movies_boxes28" onclick="openMediaPopup('media_popup28')">
     <img src="../../Ressources/img/movies/Доктор_Стрендж.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Доктор Стрендж</p>
 </div>
 <div class="movies_boxes29" onclick="openMediaPopup('media_popup29')">
     <img src="../../Ressources/img/movies/Дедпул.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Дедпул</p>
 </div>
 <div class="movies_boxes30" onclick="openMediaPopup('media_popup30')">
     <img src="../../Ressources/img/movies/Залізна_людина.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Залізна людина</p>
 </div>
 <div class="movies_boxes31" onclick="openMediaPopup('media_popup31')">
     <img src="../../Ressources/img/movies/Веном.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Веном</p>
 </div>
 <div class="movies_boxes32" onclick="openMediaPopup('media_popup32')">
     <img src="../../Ressources/img/movies/Люди_Ікс.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Люди Ікс</p>
 </div>
 <div class="movies_boxes33" onclick="openMediaPopup('media_popup33')">
     <img src="../../Ressources/img/movies/Тор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Тор</p>
 </div>
 <div class="movies_boxes34" onclick="openMediaPopup('media_popup34')">
     <img src="../../Ressources/img/movies/Аквамен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Аквамен</p>
 </div>
 <div class="movies_boxes35" onclick="openMediaPopup('media_popup35')">
     <img src="../../Ressources/img/movies/Халк.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Халк</p>
 </div>
 <div class="movies_boxes36" onclick="openMediaPopup('media_popup36')">
     <img src="../../Ressources/img/movies/Блейд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Блейд</p>
 </div>
 <div class="movies_boxes37" onclick="openMediaPopup('media_popup37')">
     <img src="../../Ressources/img/movies/Фантастична_четвірка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Фантастична четвірка</p>
 </div>
 <div class="movies_boxes38" onclick="openMediaPopup('media_popup38')">
     <img src="../../Ressources/img/movies/Примарний_вершник.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Примарний вершник</p>
 </div>
 <div class="movies_boxes39" onclick="openMediaPopup('media_popup39')">
     <img src="../../Ressources/img/movies/Морбіус.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Морбіус</p>
 </div>
 <div class="movies_boxes40" onclick="openMediaPopup('media_popup40')">
     <img src="../../Ressources/img/movies/Шибайголова.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Шибайголова</p>
 </div>
 <div class="movies_boxes41" onclick="openMediaPopup('media_popup41')">
     <img src="../../Ressources/img/movies/Росомаха.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Росомаха</p>
 </div>
 <div class="movies_boxes42" onclick="openMediaPopup('media_popup42')">
     <img src="../../Ressources/img/movies/Бетмен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Бетмен</p>
 </div>
 <div class="movies_boxes43" onclick="openMediaPopup('media_popup43')">
     <img src="../../Ressources/img/movies/Воїн2011.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Воїн</p>
 </div>
 <div class="movies_boxes44" onclick="openMediaPopup('media_popup44')">
     <img src="../../Ressources/img/movies/Нечто.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Нечто</p>
 </div>
 <div class="movies_boxes45" onclick="openMediaPopup('media_popup45')">
     <img src="../../Ressources/img/movies/Парк_Юрського_періоду.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Парк Юрського періоду</p>
 </div>
 <div class="movies_boxes46" onclick="openMediaPopup('media_popup46')">
     <img src="../../Ressources/img/movies/Убити_Білла.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Убити Білла</p>
 </div>
 <div class="movies_boxes47" onclick="openMediaPopup('media_popup47')">
     <img src="../../Ressources/img/movies/Судна_ніч.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Судна ніч</p>
 </div>
 <div class="movies_boxes49" onclick="openMediaPopup('media_popup49')">
     <img src="../../Ressources/img/movies/Тихе_місце.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Тихе місце</p>
 </div>
 <div class="movies_boxes50" onclick="openMediaPopup('media_popup50')">
     <img src="../../Ressources/img/movies/Аватар.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Аватар</p>
 </div>
 <div class="movies_boxes51" onclick="openMediaPopup('media_popup51')">
     <img src="../../Ressources/img/movies/Воно.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Воно</p>
 </div>
 <div class="movies_boxes52" onclick="openMediaPopup('media_popup52')">
     <img src="../../Ressources/img/movies/Бойовик_Джексон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Бойовик Джексон</p>
 </div>
 <div class="movies_boxes53" onclick="openMediaPopup('media_popup53')">
     <img src="../../Ressources/img/movies/Я робот.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Я робот</p>
 </div>
 <div class="movies_boxes54" onclick="openMediaPopup('media_popup54')">
     <img src="../../Ressources/img/movies/Я_легенда.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Я легенда</p>
 </div>
 <div class="movies_boxes55" onclick="openMediaPopup('media_popup55')">
     <img src="../../Ressources/img/movies/Двійник.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Двійник</p>
 </div>
 <div class="movies_boxes56" onclick="openMediaPopup('media_popup56')">
     <img src="../../Ressources/img/movies/Хенкок.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Хенкок</p>
 </div>
 <div class="movies_boxes57" onclick="openMediaPopup('media_popup57')">
     <img src="../../Ressources/img/movies/Яскравість.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Яскравість</p>
 </div>
 <div class="movies_boxes58" onclick="openMediaPopup('media_popup58')">
     <img src="../../Ressources/img/movies/Аладдін.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Аладдін</p>
 </div>
 <div class="movies_boxes59" onclick="openMediaPopup('media_popup59')">
     <img src="../../Ressources/img/movies/Земля_після_нашої_Ери.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Земля після нашої Ери</p>
 </div>
 <div class="movies_boxes60" onclick="openMediaPopup('media_popup60')">
     <img src="../../Ressources/img/movies/Джон_Уік.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Джон Уік</p>
 </div>
 <div class="movies_boxes61" onclick="openMediaPopup('media_popup61')">
     <img src="../../Ressources/img/movies/Матриця.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Матриця</p>
 </div>
 <div class="movies_boxes62" onclick="openMediaPopup('media_popup62')">
     <img src="../../Ressources/img/movies/47Ронін.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">47 Ронін</p>
 </div>
 <div class="movies_boxes63" onclick="openMediaPopup('media_popup63')">
     <img src="../../Ressources/img/movies/Майстер_Тайцзи.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Майстер Тайцзи</p>
 </div>
 <div class="movies_boxes64" onclick="openMediaPopup('media_popup64')">
     <img src="../../Ressources/img/movies/День_коли_земля_зупинилася.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">День коли земля зупинилася</p>
 </div>
 <div class="movies_boxes65" onclick="openMediaPopup('media_popup65')">
     <img src="../../Ressources/img/movies/На_гребні_хвилі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">На гребні хвилі</p>
 </div>
 <div class="movies_boxes66" onclick="openMediaPopup('media_popup66')">
     <img src="../../Ressources/img/movies/Будинок_біля_озера.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Будинок біля озера</p>
 </div>
 <div class="movies_boxes67" onclick="openMediaPopup('media_popup67')">
     <img src="../../Ressources/img/movies/Константин.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Константин</p>
 </div>
 <div class="movies_boxes68" onclick="openMediaPopup('media_popup68')">
     <img src="../../Ressources/img/movies/Адвокат_диявола.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Адвокат диявола</p>
 </div>
 <div class="movies_boxes69" onclick="openMediaPopup('media_popup69')">
     <img src="../../Ressources/img/movies/Джонні_Мнемонік.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Джонні Мнемонік</p>
 </div>
 <div class="movies_boxes70" onclick="openMediaPopup('media_popup70')">
     <img src="../../Ressources/img/movies/Швидкість.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Швидкість</p>
 </div>
 <div class="movies_boxes71" onclick="openMediaPopup('media_popup71')">
     <img src="../../Ressources/img/movies/Легенда.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Легенда</p>
 </div>
 <div class="movies_boxes72" onclick="openMediaPopup('media_popup72')">
     <img src="../../Ressources/img/movies/Місія_на_двох.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Місія на двох</p>
 </div>
 <div class="movies_boxes73" onclick="openMediaPopup('media_popup73')">
     <img src="../../Ressources/img/movies/Обережно_кінь.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Обережно кінь</p>
 </div>
 <div class="movies_boxes74" onclick="openMediaPopup('media_popup74')">
     <img src="../../Ressources/img/movies/Таємниця_печатки_дракона.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Таємниця печатки дракона</p>
 </div>
 <div class="movies_boxes75" onclick="openMediaPopup('media_popup75')">
     <img src="../../Ressources/img/movies/Іноземець.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Іноземець</p>
 </div>
 <div class="movies_boxes76" onclick="openMediaPopup('media_popup76')">
     <img src="../../Ressources/img/movies/Кровоточива_сталь.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Кровоточива сталь</p>
 </div>
 <div class="movies_boxes77" onclick="openMediaPopup('media_popup77')">
     <img src="../../Ressources/img/movies/Обладунки_Бога.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Обладунки Бога</p>
 </div>
 <div class="movies_boxes78" onclick="openMediaPopup('media_popup78')">
     <img src="../../Ressources/img/movies/Пригоди_Джекі_Чана.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Пригоди Джекі Чана</p>
 </div>
 <div class="movies_boxes79" onclick="openMediaPopup('media_popup79')">
     <img src="../../Ressources/img/movies/Залізничні_тигри.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Залізничні тигри</p>
 </div>
 <div class="movies_boxes80" onclick="openMediaPopup('media_popup80')">
     <img src="../../Ressources/img/movies/Меч_дракона.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Меч дракона</p>
 </div>
 <div class="movies_boxes81" onclick="openMediaPopup('media_popup81')">
     <img src="../../Ressources/img/movies/Коли_гасне_світло.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Коли гасне світло</p>
 </div>
 <div class="movies_boxes82" onclick="openMediaPopup('media_popup82')">
     <img src="../../Ressources/img/movies/Карате_Кід.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Карате Кід</p>
 </div>
 <div class="movies_boxes83" onclick="openMediaPopup('media_popup83')">
     <img src="../../Ressources/img/movies/Шпигунпосусідству.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Шпигун по сусідству</p>
 </div>
 <div class="movies_boxes84" onclick="openMediaPopup('media_popup84')">
     <img src="../../Ressources/img/movies/Інцидент_у_Синдзюкі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Інцидент у Синдзюкі</p>
 </div>
 <div class="movies_boxes85" onclick="openMediaPopup('media_popup85')">
     <img src="../../Ressources/img/movies/Заборонене_царство.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Заборонене царство</p>
 </div>
 <div class="movies_boxes86" onclick="openMediaPopup('media_popup86')">
     <img src="../../Ressources/img/movies/Медальон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Медальон</p>
 </div>
 <div class="movies_boxes87" onclick="openMediaPopup('media_popup87')">
     <img src="../../Ressources/img/movies/Смокінг.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Смокінг</p>
 </div>
 <div class="movies_boxes88" onclick="openMediaPopup('media_popup88')">
     <img src="../../Ressources/img/movies/Випадковий_шпигун.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Випадковий шпигун</p>
 </div>
 <div class="movies_boxes89" onclick="openMediaPopup('media_popup89')">
     <img src="../../Ressources/img/movies/Хто_я.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Хто я</p>
 </div>
 <div class="movies_boxes90" onclick="openMediaPopup('media_popup90')">
     <img src="../../Ressources/img/movies/Близнюки_Дракони.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Близнюки Дракони</p>
 </div>
 <div class="movies_boxes91" onclick="openMediaPopup('media_popup91')">
     <img src="../../Ressources/img/movies/Сердце_дракона.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Сердце дракона</p>
 </div>
 <div class="movies_boxes92" onclick="openMediaPopup('media_popup92')">
     <img src="../../Ressources/img/movies/Кулак_дракона.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Кулак дракона</p>
 </div>
 <div class="movies_boxes93" onclick="openMediaPopup('media_popup93')">
     <img src="../../Ressources/img/movies/П'яний_майстер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">П'яний майстер</p>
 </div>
 <div class="movies_boxes94" onclick="openMediaPopup('media_popup94')">
     <img src="../../Ressources/img/movies/Космонавт.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Космонавт</p>
 </div>
 <div class="movies_boxes95" onclick="openMediaPopup('media_popup95')">
     <img src="../../Ressources/img/movies/Хеллоуїн_Кюбі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Хеллоуїн Кюбі</p>
 </div>
 <div class="movies_boxes96" onclick="openMediaPopup('media_popup96')">
     <img src="../../Ressources/img/movies/Сенді_Векслер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Сенді Векслер</p>
 </div>
 <div class="movies_boxes97" onclick="openMediaPopup('media_popup97')">
     <img src="../../Ressources/img/movies/Усе_спочатку.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Все спочатку</p>
 </div>
 <div class="movies_boxes98" onclick="openMediaPopup('media_popup98')">
     <img src="../../Ressources/img/movies/Пікселі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Пікселі</p>
 </div>
 <div class="movies_boxes99" onclick="openMediaPopup('media_popup99')">
     <img src="../../Ressources/img/movies/Чоботар.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Чоботар</p>
 </div>
 <div class="movies_boxes100" onclick="openMediaPopup('media_popup100')">
     <img src="../../Ressources/img/movies/Змішані.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Змішані</p>
 </div>
 <div class="movies_boxes101" onclick="openMediaPopup('media_popup101')">
     <img src="../../Ressources/img/movies/Однокласники.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Однокласники</p>
 </div>
 <div class="movies_boxes102" onclick="openMediaPopup('media_popup102')">
     <img src="../../Ressources/img/movies/Мій_пацан.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мій пацан</p>
 </div>
 <div class="movies_boxes103" onclick="openMediaPopup('media_popup103')">
     <img src="../../Ressources/img/movies/Джек_і_Джілл.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Джек і Джілл</p>
 </div>
 <div class="movies_boxes104" onclick="openMediaPopup('media_popup104')">
     <img src="../../Ressources/img/movies/Дружина_напрокат.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Дружина напрокат</p>
 </div>
 <div class="movies_boxes105" onclick="openMediaPopup('media_popup105')">
     <img src="../../Ressources/img/movies/Зохан.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Зохан</p>
 </div>
 <div class="movies_boxes106" onclick="openMediaPopup('media_popup106')">
     <img src="../../Ressources/img/movies/Чак_і_Ларі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Чак і Ларі</p>
 </div>
 <div class="movies_boxes107" onclick="openMediaPopup('media_popup107')">
     <img src="../../Ressources/img/movies/Клік.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Клік</p>
 </div>
 <div class="movies_boxes108" onclick="openMediaPopup('media_popup108')">
     <img src="../../Ressources/img/movies/Все_або_нічого.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Все або нічого</p>
 </div>
 <div class="movies_boxes109" onclick="openMediaPopup('media_popup109')">
     <img src="../../Ressources/img/movies/Управління_гнівом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Управління гнівом</p>
 </div>
 <div class="movies_boxes110" onclick="openMediaPopup('media_popup110')">
     <img src="../../Ressources/img/movies/Ципочка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Ципочка</p>
 </div>
 <div class="movies_boxes111" onclick="openMediaPopup('media_popup111')">
     <img src="../../Ressources/img/movies/Мільйонер_мимоволі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мільйонер мимоволі</p>
 </div>
 <div class="movies_boxes112" onclick="openMediaPopup('media_popup112')">
     <img src="../../Ressources/img/movies/Нікі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Нікі Диявол</p>
 </div>
 <div class="movies_boxes113" onclick="openMediaPopup('media_popup113')">
     <img src="../../Ressources/img/movies/Великий_тато.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Великий тато</p>
 </div>
 <div class="movies_boxes114" onclick="openMediaPopup('media_popup114')">
     <img src="../../Ressources/img/movies/Білі_Медісон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Білі Медісон</p>
 </div>
 <div class="movies_boxes115" onclick="openMediaPopup('media_popup115')">
     <img src="../../Ressources/img/movies/Самотні_вовки.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Самотні вовки</p>
 </div>
 <div class="movies_boxes116" onclick="openMediaPopup('media_popup116')">
     <img src="../../Ressources/img/movies/Швидкісний_поїзд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Швидкісний поїзд</p>
 </div>
 <div class="movies_boxes117" onclick="openMediaPopup('media_popup117')">
     <img src="../../Ressources/img/movies/Одного_разу_._в_Голлівуді.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Одного разу в Голлівуді</p>
 </div>
 <div class="movies_boxes118" onclick="openMediaPopup('media_popup118')">
     <img src="../../Ressources/img/movies/Лють.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Лють</p>
 </div>
 <div class="movies_boxes119" onclick="openMediaPopup('media_popup119')">
     <img src="../../Ressources/img/movies/Бенджамін_Батон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Бенджамін Батон</p>
 </div>
 <div class="movies_boxes120" onclick="openMediaPopup('media_popup120')">
     <img src="../../Ressources/img/movies/Великий_куш.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Великий куш</p>
 </div>
 <div class="movies_boxes121" onclick="openMediaPopup('media_popup121')">
     <img src="../../Ressources/img/movies/Містер_і_місіс_Сміт.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Містер і місіс Сміт</p>
 </div>
 <div class="movies_boxes122" onclick="openMediaPopup('media_popup122')">
     <img src="../../Ressources/img/movies/Тринадцять_друзів_Оушена.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Тринадцять друзів Оушена</p>
 </div>
 <div class="movies_boxes123" onclick="openMediaPopup('media_popup123')">
     <img src="../../Ressources/img/movies/Сім.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Сім</p>
 </div>
 <div class="movies_boxes124" onclick="openMediaPopup('media_popup124')">
     <img src="../../Ressources/img/movies/Байки_зі_склепу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Байки зі склепу</p>
 </div>
 <div class="movies_boxes125" onclick="openMediaPopup('media_popup125')">
     <img src="../../Ressources/img/movies/Кошмар_на_вулиці_в'язів.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Кошмар на вулиці в'язів</p>
 </div>
 <div class="movies_boxes126" onclick="openMediaPopup('media_popup126')">
     <img src="../../Ressources/img/movies/П'ятниця13.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">П'ятниця 13</p>
 </div>
 <div class="movies_boxes127" onclick="openMediaPopup('media_popup127')">
     <img src="../../Ressources/img/movies/Чужий.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Чужий</p>
 </div>
 <div class="movies_boxes128" onclick="openMediaPopup('media_popup128')">
     <img src="../../Ressources/img/movies/Пила.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Пила</p>
 </div>
 <div class="movies_boxes129" onclick="openMediaPopup('media_popup129')">
     <img src="../../Ressources/img/movies/П'ять_ночей_у_Фредді.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">П'ять ночей у Фредді</p>
 </div>
 <div class="movies_boxes130" onclick="openMediaPopup('media_popup130')">
     <img src="../../Ressources/img/movies/Монахиня.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Монахиня</p>
 </div>
 <div class="movies_boxes131" onclick="openMediaPopup('media_popup131')">
     <img src="../../Ressources/img/movies/Крик.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Крик</p>
 </div>
 <div class="movies_boxes132" onclick="openMediaPopup('media_popup132')">
     <img src="../../Ressources/img/movies/Закляття.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Закляття</p>
 </div>
 <div class="movies_boxes133" onclick="openMediaPopup('media_popup133')">
     <img src="../../Ressources/img/movies/Жахливий.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Жахливий</p>
 </div>
 <div class="movies_boxes134" onclick="openMediaPopup('media_popup134')">
     <img src="../../Ressources/img/movies/Астрал.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Астрал</p>
 </div>
 <div class="movies_boxes135" onclick="openMediaPopup('media_popup135')">
     <img src="../../Ressources/img/movies/Піраньї.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Піраньї</p>
 </div>
 <div class="movies_boxes136" onclick="openMediaPopup('media_popup136')">
     <img src="../../Ressources/img/movies/Акули.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Акули</p>
 </div>
 <div class="movies_boxes137" onclick="openMediaPopup('media_popup137')">
     <img src="../../Ressources/img/movies/Поворот_не_туди.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Поворот не туди</p>
 </div>
 <div class="movies_boxes138" onclick="openMediaPopup('media_popup138')">
     <img src="../../Ressources/img/movies/Пункт_призначення.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Пункт призначення</p>
 </div>
 <div class="movies_boxes139" onclick="openMediaPopup('media_popup139')">
     <img src="../../Ressources/img/movies/Хижак.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Хижак</p>
 </div>
 <div class="movies_boxes140" onclick="openMediaPopup('media_popup140')">
     <img src="../../Ressources/img/movies/Бугімен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Бугімен</p>
 </div>
 <div class="movies_boxes141" onclick="openMediaPopup('media_popup141')">
     <img src="../../Ressources/img/movies/Джестер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Джестер</p>
 </div>
 <div class="movies_boxes142" onclick="openMediaPopup('media_popup142')">
     <img src="../../Ressources/img/movies/Анабель.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Анабель</p>
 </div>
 <div class="movies_boxes143" onclick="openMediaPopup('media_popup143')">
     <img src="../../Ressources/img/movies/Чакі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Чакі</p>
 </div>
 <div class="movies_boxes144" onclick="openMediaPopup('media_popup144')">
     <img src="../../Ressources/img/movies/Дзвінки.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Дзвінки</p>
 </div>
 <div class="movies_boxes145" onclick="openMediaPopup('media_popup145')">
     <img src="../../Ressources/img/movies/Мумія.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мумія</p>
 </div>
 <div class="movies_boxes146" onclick="openMediaPopup('media_popup146')">
     <img src="../../Ressources/img/movies/Паранормальне_явище.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Паранормальне явище</p>
 </div>
 <div class="movies_boxes147" onclick="openMediaPopup('media_popup147')">
     <img src="../../Ressources/img/movies/Репортаж.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Репортаж</p>
 </div>
 <div class="movies_boxes148" onclick="openMediaPopup('media_popup148')">
     <img src="../../Ressources/img/movies/Відьма_із_блер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Відьма із блер</p>
 </div>
 <div class="movies_boxes149" onclick="openMediaPopup('media_popup149')">
     <img src="../../Ressources/img/movies/Больница_корейская_конжуан.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Больница Корейская Конжуан</p>
 </div>
 <div class="movies_boxes150" onclick="openMediaPopup('media_popup150')">
     <img src="../../Ressources/img/movies/Іскателі_могил.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Іскателі могил</p>
 </div>
 <div class="movies_boxes151" onclick="openMediaPopup('media_popup151')">
     <img src="../../Ressources/img/movies/Зловісні_мерці.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Зловісні мерці</p>
 </div>
 <div class="movies_boxes152" onclick="openMediaPopup('media_popup152')">
     <img src="../../Ressources/img/movies/Потяг_в_пусан.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Потяг в пусан</p>
 </div>
 <div class="movies_boxes153" onclick="openMediaPopup('media_popup153')">
     <img src="../../Ressources/img/movies/Острів.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Острів</p>
 </div>
 <div class="movies_boxes154" onclick="openMediaPopup('media_popup154')">
     <img src="../../Ressources/img/movies/Відьма.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Відьма</p>
 </div>
 <div class="movies_boxes155" onclick="openMediaPopup('media_popup155')">
     <img src="../../Ressources/img/movies/Поклик_пекла.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Поклик пекла</p>
 </div>
 <div class="movies_boxes156" onclick="openMediaPopup('media_popup156')">
     <img src="../../Ressources/img/movies/Гра_з_дияволом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Гра з дияволом</p>
 </div>
 <div class="movies_boxes157" onclick="openMediaPopup('media_popup157')">
     <img src="../../Ressources/img/movies/Аркадіянець.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Аркадіянець</p>
 </div>
 <div class="movies_boxes158" onclick="openMediaPopup('media_popup158')">
     <img src="../../Ressources/img/movies/Ренфілд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Ренфілд</p>
 </div>
 <div class="movies_boxes159" onclick="openMediaPopup('media_popup159')">
     <img src="../../Ressources/img/movies/В'язні_країни_привидів.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">В'язні країни привидів</p>
 </div>
 <div class="movies_boxes160" onclick="openMediaPopup('media_popup160')">
     <img src="../../Ressources/img/movies/Країна_чудес_Віллі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Країна чудес Віллі</p>
 </div>
 <div class="movies_boxes161" onclick="openMediaPopup('media_popup161')">
     <img src="../../Ressources/img/movies/Звіряча_лють.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Звіряча лють</p>
 </div>
 <div class="movies_boxes162" onclick="openMediaPopup('media_popup162')">
     <img src="../../Ressources/img/movies/Час_відьом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Час відьом</p>
 </div>
 <div class="movies_boxes163" onclick="openMediaPopup('media_popup163')">
     <img src="../../Ressources/img/movies/Учень_чаклуна.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Учень чаклуна</p>
 </div>
 <div class="movies_boxes164" onclick="openMediaPopup('media_popup164')">
     <img src="../../Ressources/img/movies/Піпец.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Піпец</p>
 </div>
 <div class="movies_boxes165" onclick="openMediaPopup('media_popup165')">
     <img src="../../Ressources/img/movies/Пророк.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Пророк</p>
 </div>
 <div class="movies_boxes166" onclick="openMediaPopup('media_popup166')">
     <img src="../../Ressources/img/movies/Плетена_людина.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Плетена людина</p>
 </div>
 <div class="movies_boxes167" onclick="openMediaPopup('media_popup167')">
     <img src="../../Ressources/img/movies/Скарб_нації.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Скарб нації</p>
 </div>
 <div class="movies_boxes168" onclick="openMediaPopup('media_popup168')">
     <img src="../../Ressources/img/movies/Без_обличчя.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Без обличчя</p>
 </div>
 <div class="movies_boxes169" onclick="openMediaPopup('media_popup169')">
     <img src="../../Ressources/img/movies/Тисяча_слів.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Тисяча слів</p>
 </div>
 <div class="movies_boxes170" onclick="openMediaPopup('media_popup170')">
     <img src="../../Ressources/img/movies/Поліцейський_з_Беверлі_хілз.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Поліцейський з Беверлі Хілз</p>
 </div>
 <div class="movies_boxes171" onclick="openMediaPopup('media_popup171')">
     <img src="../../Ressources/img/movies/Як_обікрасти_хмарочос.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Як обікрасти хмарочос</p>
 </div>
 <div class="movies_boxes172" onclick="openMediaPopup('media_popup172')">
     <img src="../../Ressources/img/movies/Норбіт.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Норбіт</p>
 </div>
 <div class="movies_boxes173" onclick="openMediaPopup('media_popup173')">
     <img src="../../Ressources/img/movies/Будинок_з_приколами.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Будинок з приколами</p>
 </div>
 <div class="movies_boxes174" onclick="openMediaPopup('media_popup174')">
     <img src="../../Ressources/img/movies/Доктор_дулітл.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Доктор дулітл</p>
 </div>
 <div class="movies_boxes175" onclick="openMediaPopup('media_popup175')">
     <img src="../../Ressources/img/movies/Божевільний_професор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Божевільний професор</p>
 </div>
 <div class="movies_boxes176" onclick="openMediaPopup('media_popup176')">
     <img src="../../Ressources/img/movies/Зоолендер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Зоолендер</p>
 </div>
 <div class="movies_boxes177" onclick="openMediaPopup('media_popup177')">
     <img src="../../Ressources/img/movies/Ніч_у_музеї.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Ніч у музеї</p>
 </div>
 <div class="movies_boxes178" onclick="openMediaPopup('media_popup178')">
     <img src="../../Ressources/img/movies/Знайомство_з_факерами.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Знайомство з факерами</p>
 </div>
 <div class="movies_boxes179" onclick="openMediaPopup('media_popup179')">
     <img src="../../Ressources/img/movies/Грім_у_тропіках.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Грім у тропіках</p>
 </div>
 <div class="movies_boxes180" onclick="openMediaPopup('media_popup180')">
     <img src="../../Ressources/img/movies/Дівчина_моїх_кошмарів.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Дівчина моїх кошмарів</p>
 </div>
 <div class="movies_boxes181" onclick="openMediaPopup('media_popup181')">
     <img src="../../Ressources/img/movies/Вишибали.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Вишибали</p>
 </div>
 <div class="movies_boxes182" onclick="openMediaPopup('media_popup182')">
     <img src="../../Ressources/img/movies/Дюплекс.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Дюплекс</p>
 </div>
 <div class="movies_boxes183" onclick="openMediaPopup('media_popup183')">
     <img src="../../Ressources/img/movies/Таємничі_люди.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Таємничі люди</p>
 </div>
 <div class="movies_boxes184" onclick="openMediaPopup('media_popup184')">
     <img src="../../Ressources/img/movies/Король_Квінсу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Король Квінсу</p>
 </div>
 <div class="movies_boxes185" onclick="openMediaPopup('media_popup185')">
     <img src="../../Ressources/img/movies/Їжак_Соніка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Їжак Соніка</p>
 </div>
 <div class="movies_boxes186" onclick="openMediaPopup('media_popup186')">
     <img src="../../Ressources/img/movies/Тупий_і_ще_тупіший.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Тупий і ще тупіший</p>
 </div>
 <div class="movies_boxes187" onclick="openMediaPopup('media_popup187')">
     <img src="../../Ressources/img/movies/Неймовірний_Берт.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Неймовірний Берт</p>
 </div>
 <div class="movies_boxes188" onclick="openMediaPopup('media_popup188')">
     <img src="../../Ressources/img/movies/Завжди_кажи_так.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Завжди кажи так</p>
 </div>
 <div class="movies_boxes190" onclick="openMediaPopup('media_popup190')">
     <img src="../../Ressources/img/movies/Брюс_Всемогутній.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Брюс Всемогутній</p>
 </div>
 <div class="movies_boxes191" onclick="openMediaPopup('media_popup191')">
     <img src="../../Ressources/img/movies/Грінч.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Грінч</p>
 </div>
 <div class="movies_boxes192" onclick="openMediaPopup('media_popup192')">
     <img src="../../Ressources/img/movies/Я_знову_я_і_Ерен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Я знову я і Ерен</p>
 </div>
 <div class="movies_boxes193" onclick="openMediaPopup('media_popup193')">
     <img src="../../Ressources/img/movies/Брехун_Брехун.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Брехун Брехун</p>
 </div>
 <div class="movies_boxes194" onclick="openMediaPopup('media_popup194')">
     <img src="../../Ressources/img/movies/Ейс_Вентура.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Ейс Вентура</p>
 </div>
 <div class="movies_boxes195" onclick="openMediaPopup('media_popup195')">
     <img src="../../Ressources/img/movies/Маска.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Маска</p>
 </div>
 <div class="movies_boxes196" onclick="openMediaPopup('media_popup196')">
     <img src="../../Ressources/img/movies/Син_Маска.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Син Маски</p>
 </div>
 <div class="movies_boxes197" onclick="openMediaPopup('media_popup197')">
     <img src="../../Ressources/img/movies/Половину_воспитание.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Статеве виховання</p>
 </div>
 <div class="movies_boxes198" onclick="openMediaPopup('media_popup198')">
     <img src="../../Ressources/img/movies/Последний_рубеж.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Останній рубіж</p>
 </div>
 <div class="movies_boxes199" onclick="openMediaPopup('media_popup199')">
     <img src="../../Ressources/img/movies/Защитнег.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Защітнег</p>
 </div>
 <div class="movies_boxes200" onclick="openMediaPopup('media_popup200')">
     <img src="../../Ressources/img/movies/Игра_на_выживание.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Гра на виживання</p>
 </div>
 <div class="movies_boxes201" onclick="openMediaPopup('media_popup201')">
     <img src="../../Ressources/img/movies/Призрачный_ход.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Примарний хід</p>
 </div>
 <div class="movies_boxes202" onclick="openMediaPopup('media_popup202')">
     <img src="../../Ressources/img/movies/Коп_з_чёрным_поясом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Коп з чорним поясом</p>
 </div>
         <div class="movies_boxes373" onclick="openMediaPopup('media_popup373')">
             <img src="../../Ressources/img/movies/Мост_в_терабитию.webp" alt="Опис картинки" class="movie_img" loading="lazy">
-        <div class="rating1"></div></div>
+        <div class="rating1"></div>    <p class="p_text_media">Міст в Терабітію</p>
+</div>
 <div class="movies_boxes203" onclick="openMediaPopup('media_popup203')">
     <img src="../../Ressources/img/movies/Гарольд_и_волшебный_мелок.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Гарольд і чарівна крейда</p>
 </div>
 <div class="movies_boxes204" onclick="openMediaPopup('media_popup204')">
     <img src="../../Ressources/img/movies/Укрытие.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Укриття</p>
 </div>
 <div class="movies_boxes205" onclick="openMediaPopup('media_popup205')">
     <img src="../../Ressources/img/movies/Ночные_игры.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Нічні ігри</p>
 </div>
 <div class="movies_boxes206" onclick="openMediaPopup('media_popup206')">
     <img src="../../Ressources/img/movies/Холод_в_июле.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Холод в липні</p>
 </div>
 <div class="movies_boxes207" onclick="openMediaPopup('media_popup207')">
     <img src="../../Ressources/img/movies/Марс_атакует.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Марс Атакує</p>
 </div>
 <div class="movies_boxes208" onclick="openMediaPopup('media_popup208')">
     <img src="../../Ressources/img/movies/Убийцы_цветочной_луны_.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Вбивці Квіткового Місяця</p>
 </div>
 <div class="movies_boxes209" onclick="openMediaPopup('media_popup209')">
     <img src="../../Ressources/img/movies/Молчи_в_тряпочку.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Мовчи в Ганчірку</p>
 </div>
 <div class="movies_boxes210" onclick="openMediaPopup('media_popup210')">
     <img src="../../Ressources/img/movies/Джонні_Д.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Джонні Д</p>
 </div>
 <div class="movies_boxes211" onclick="openMediaPopup('media_popup211')">
     <img src="../../Ressources/img/movies/Мордекай.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Мордекай</p>
 </div>
 <div class="movies_boxes212" onclick="openMediaPopup('media_popup212')">
     <img src="../../Ressources/img/movies/Напрягти_ізвилини.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Напрягти ізвилини</p>
 </div>
 <div class="movies_boxes213" onclick="openMediaPopup('media_popup213')">
     <img src="../../Ressources/img/movies/Толстяк_на_ринге.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Товстун на рингу</p>
 </div>
 <div class="movies_boxes214" onclick="openMediaPopup('media_popup214')">
     <img src="../../Ressources/img/movies/Типа_крутые_легавые.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Типу Круті Лігаві</p>
 </div>
 <div class="movies_boxes215" onclick="openMediaPopup('media_popup215')">
     <img src="../../Ressources/img/movies/Всё_могу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Все можу</p>
 </div>
 <div class="movies_boxes216" onclick="openMediaPopup('media_popup216')">
     <img src="../../Ressources/img/movies/Автостопом_по_галактике.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Автостопом Галактикою</p>
 </div>
 <div class="movies_boxes217" onclick="openMediaPopup('media_popup217')">
     <img src="../../Ressources/img/movies/Флірт_з_дияволом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Флірт з дияволом</p>
 </div>
 <div class="movies_boxes218" onclick="openMediaPopup('media_popup218')">
     <img src="../../Ressources/img/movies/Без_чуств.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Без почуттів</p>
 </div>
 <div class="movies_boxes219" onclick="openMediaPopup('media_popup219')">
     <img src="../../Ressources/img/movies/Моя_супер_колишня.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Моя супер колишня</p>
 </div>
 <div class="movies_boxes220" onclick="openMediaPopup('media_popup220')">
     <img src="../../Ressources/img/movies/Коп_на_драйве.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Коп на драйві</p>
 </div>
 <div class="movies_boxes221" onclick="openMediaPopup('media_popup221')">
     <img src="../../Ressources/img/movies/Алоха.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Алоха</p>
 </div>
 <div class="movies_boxes222" onclick="openMediaPopup('media_popup222')">
     <img src="../../Ressources/img/movies/Limitless.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Limitless</p>
 </div>
 <div class="movies_boxes223" onclick="openMediaPopup('media_popup223')">
     <img src="../../Ressources/img/movies/Птичий_короб.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Птичий короб</p>
 </div>
 <div class="movies_boxes224" onclick="openMediaPopup('media_popup224')">
     <img src="../../Ressources/img/movies/Доктор_сон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Доктор Сон</p>
 </div>
 <div class="movies_boxes225" onclick="openMediaPopup('media_popup225')">
     <img src="../../Ressources/img/movies/Скрюченый_домишко.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Скручений Домішко</p>
 </div>
 <div class="movies_boxes226" onclick="openMediaPopup('media_popup226')">
     <img src="../../Ressources/img/movies/Агент_Джонні_Інгліш.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Агент Джонні Інгліш</p>
 </div>
 <div class="movies_boxes227" onclick="openMediaPopup('media_popup227')">
     <img src="../../Ressources/img/movies/Ковбої_проти_пришельців.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Ковбої проти пришельців</p>
 </div>
 <div class="movies_boxes228" onclick="openMediaPopup('media_popup228')">
     <img src="../../Ressources/img/movies/Мой_парень_—_киллер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мій Хлопець кілер</p>
 </div>
 <div class="movies_boxes229" onclick="openMediaPopup('media_popup229')">
     <img src="../../Ressources/img/movies/Агенти_Чарлі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Агенти Чарлі</p>
 </div>
 <div class="movies_boxes230" onclick="openMediaPopup('media_popup230')">
     <img src="../../Ressources/img/movies/Девять_ярдов_(постер).webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Дев'ять Ярдів</p>
 </div>
 <div class="movies_boxes231" onclick="openMediaPopup('media_popup231')">
     <img src="../../Ressources/img/movies/Взгляд_зимы.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Погляд зими</p>
 </div>
 <div class="movies_boxes232" onclick="openMediaPopup('media_popup232')">
     <img src="../../Ressources/img/movies/Почему_он.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Чому він</p>
 </div>
 <div class="movies_boxes233" onclick="openMediaPopup('media_popup233')">
     <img src="../../Ressources/img/movies/Драйв_.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Драйв</p>
 </div>
 <div class="movies_boxes234" onclick="openMediaPopup('media_popup234')">
     <img src="../../Ressources/img/movies/Ідеальне_вбивство.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Ідеальне вбивство</p>
 </div>
 <div class="movies_boxes235" onclick="openMediaPopup('media_popup235')">
     <img src="../../Ressources/img/movies/На_грани.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">На грані</p>
 </div>
 <div class="movies_boxes236" onclick="openMediaPopup('media_popup236')">
     <img src="../../Ressources/img/movies/Место_под_соснами.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Місце під соснами</p>
 </div>
 <div class="movies_boxes237" onclick="openMediaPopup('media_popup237')">
     <img src="../../Ressources/img/movies/Планкет_и_Маклейн.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Планкет і Маклейн</p>
 </div>
 <div class="movies_boxes238" onclick="openMediaPopup('media_popup238')">
     <img src="../../Ressources/img/movies/Красная_Шапочка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Червона Шапочка</p>
 </div>
 <div class="movies_boxes239" onclick="openMediaPopup('media_popup239')">
     <img src="../../Ressources/img/movies/Форест_Гамп.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Форест Гамп</p>
 </div>
 <div class="movies_boxes240" onclick="openMediaPopup('media_popup240')">
     <img src="../../Ressources/img/movies/Мальчишник_в_Вегасе.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Хлопчак у Вегасі</p>
 </div>
 <div class="movies_boxes241" onclick="openMediaPopup('media_popup241')">
     <img src="../../Ressources/img/movies/Канікули.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Канікули</p>
 </div>
 <div class="movies_boxes242" onclick="openMediaPopup('media_popup242')">
     <img src="../../Ressources/img/movies/Очень_страшное_кино._Зло_вернуло.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Дуже Страшне Кіно. Зло Повернулося</p>
 </div>
 <div class="movies_boxes243" onclick="openMediaPopup('media_popup243')">
     <img src="../../Ressources/img/movies/Очень_стращное_кино.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Дуже страшне кіно</p>
 </div>
 <div class="movies_boxes244" onclick="openMediaPopup('media_popup244')">
     <img src="../../Ressources/img/movies/Убойные_каникулы.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Забійні Канікули</p>
 </div>
 <div class="movies_boxes245" onclick="openMediaPopup('media_popup245')">
     <img src="../../Ressources/img/movies/Поездка_2021.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Поїздка</p>
 </div>
 <div class="movies_boxes246" onclick="openMediaPopup('media_popup246')">
     <img src="../../Ressources/img/movies/Дэниел_ненастоящий.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Деніел Несправжній</p>
 </div>
 <div class="movies_boxes247" onclick="openMediaPopup('media_popup247')">
     <img src="../../Ressources/img/movies/Я_не_киллер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Я не кілер</p>
 </div>
 <div class="movies_boxes248" onclick="openMediaPopup('media_popup248')">
     <img src="../../Ressources/img/movies/Протистояння.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Протистояння</p>
 </div>
 <div class="movies_boxes249" onclick="openMediaPopup('media_popup249')">
     <img src="../../Ressources/img/movies/Соседи_на_тропе_войни.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Сусіди на стежці війни</p>
 </div>
 <div class="movies_boxes250" onclick="openMediaPopup('media_popup250')">
     <img src="../../Ressources/img/movies/Кот_2003.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Кіт</p>
 </div>
 <div class="movies_boxes251" onclick="openMediaPopup('media_popup251')">
     <img src="../../Ressources/img/movies/Круїз_по_джунглях.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Круїз по джунглях</p>
 </div>
 <div class="movies_boxes252" onclick="openMediaPopup('media_popup252')">
     <img src="../../Ressources/img/movies/Рампейдж.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Рампейдж</p>
 </div>
 <div class="movies_boxes253" onclick="openMediaPopup('media_popup253')">
     <img src="../../Ressources/img/movies/Спасатели_Малибу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Рятувальники Малібу</p>
 </div>
 <div class="movies_boxes254" onclick="openMediaPopup('media_popup254')">
     <img src="../../Ressources/img/movies/Ісходний_код.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Ісходний код</p>
 </div>
 <div class="movies_boxes255" onclick="openMediaPopup('media_popup255')">
     <img src="../../Ressources/img/movies/Команда_А.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Команда А</p>
 </div>
 <div class="movies_boxes256" onclick="openMediaPopup('media_popup256')">
     <img src="../../Ressources/img/movies/Разрушение.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Руйнування</p>
 </div>
 <div class="movies_boxes257" onclick="openMediaPopup('media_popup257')">
     <img src="../../Ressources/img/movies/Зодіак.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Зодіак</p>
 </div>
 <div class="movies_boxes258" onclick="openMediaPopup('media_popup258')">
     <img src="../../Ressources/img/movies/Живое.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Живе</p>
 </div>
 <div class="movies_boxes259" onclick="openMediaPopup('media_popup259')">
     <img src="../../Ressources/img/movies/Дом_у_дороги.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Будинок у дороги</p>
 </div>
 <div class="movies_boxes260" onclick="openMediaPopup('media_popup260')">
     <img src="../../Ressources/img/movies/Планета_обезян.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Планета мавп</p>
 </div>
 <div class="movies_boxes261" onclick="openMediaPopup('media_popup261')">
     <img src="../../Ressources/img/movies/Супернянь.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Супернянь</p>
 </div>
 <div class="movies_boxes262" onclick="openMediaPopup('media_popup262')">
     <img src="../../Ressources/img/movies/Диявол_завжди_тут.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Диявол завжди тут</p>
 </div>
 <div class="movies_boxes263" onclick="openMediaPopup('media_popup263')">
     <img src="../../Ressources/img/movies/Пацан_проти_всіх.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Пацан проти всіх</p>
 </div>
 <div class="movies_boxes264" onclick="openMediaPopup('media_popup264')">
     <img src="../../Ressources/img/movies/57_секунд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">57 секунд</p>
 </div>
 <div class="movies_boxes265" onclick="openMediaPopup('media_popup265')">
     <img src="../../Ressources/img/movies/Копы_в_глубоком_запасе.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Копи в Глибокому Запасі</p>
 </div>
 <div class="movies_boxes266" onclick="openMediaPopup('media_popup266')">
     <img src="../../Ressources/img/movies/Артур_ты_король.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Артур Ти Король</p>
 </div>
 <div class="movies_boxes267" onclick="openMediaPopup('media_popup267')">
     <img src="../../Ressources/img/movies/Падіння_олімпа.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Падіння олімпа</p>
 </div>
 <div class="movies_boxes268" onclick="openMediaPopup('media_popup268')">
     <img src="../../Ressources/img/movies/История_одного_вампира.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Історія Одного Вампіра</p>
 </div>
 <div class="movies_boxes269" onclick="openMediaPopup('media_popup269')">
     <img src="../../Ressources/img/movies/Штурм_білого_дома.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Штурм білого дома</p>
 </div>
 <div class="movies_boxes270" onclick="openMediaPopup('media_popup270')">
     <img src="../../Ressources/img/movies/Охотник_за_головами.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Охотник за головами</p>
 </div>
 <div class="movies_boxes271" onclick="openMediaPopup('media_popup271')">
     <img src="../../Ressources/img/movies/Проповідник_з_кулеметом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Проповідник з кулеметом</p>
 </div>
 <div class="movies_boxes272" onclick="openMediaPopup('media_popup272')">
     <img src="../../Ressources/img/movies/Острів_Нім.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Острів Нім</p>
 </div>
 <div class="movies_boxes273" onclick="openMediaPopup('media_popup273')">
     <img src="../../Ressources/img/movies/Боги_Єгипта.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Боги Єгипта</p>
 </div>
 <div class="movies_boxes274" onclick="openMediaPopup('media_popup274')">
     <img src="../../Ressources/img/movies/Геймер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Геймер</p>
 </div>
 <div class="movies_boxes275" onclick="openMediaPopup('media_popup275')">
     <img src="../../Ressources/img/movies/Лара_Крофт.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Лара Крофт</p>
 </div>
 <div class="movies_boxes276" onclick="openMediaPopup('media_popup276')">
     <img src="../../Ressources/img/movies/Парк_Культури_і_відпочинку.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Парк Культури і відпочинку</p>
 </div>
 <div class="movies_boxes277" onclick="openMediaPopup('media_popup277')">
     <img src="../../Ressources/img/movies/Старски_и_Хатч.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Старскі і Хатч</p>
 </div>
 <div class="movies_boxes278" onclick="openMediaPopup('media_popup278')">
     <img src="../../Ressources/img/movies/Мій_парень_псих.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Мій хлопець псих</p>
 </div>
 <div class="movies_boxes279" onclick="openMediaPopup('media_popup279')">
     <img src="../../Ressources/img/movies/Страх_і_ненависть_в_Лас_Вегасі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Страх і ненависть в Лас Вегасі</p>
 </div>
 <div class="movies_boxes280" onclick="openMediaPopup('media_popup280')">
     <img src="../../Ressources/img/movies/Телохранитель_на_фрилансі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Телохранитель на фрилансі</p>
 </div>
 <div class="movies_boxes281" onclick="openMediaPopup('media_popup281')">
     <img src="../../Ressources/img/movies/Реальні_упирі.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Реальні упирі</p>
 </div>
 <div class="movies_boxes282" onclick="openMediaPopup('media_popup282')">
     <img src="../../Ressources/img/movies/GhostShip.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Корабель-привид</p>
 </div>
 <div class="movies_boxes283" onclick="openMediaPopup('media_popup283')">
     <img src="../../Ressources/img/movies/Горящі_голови.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Горящі голови</p>
 </div>
 <div class="movies_boxes284" onclick="openMediaPopup('media_popup284')">
     <img src="../../Ressources/img/movies/Никогда_не_сдавайся.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Ніколи Не Здавайся</p>
 </div>
 <div class="movies_boxes285" onclick="openMediaPopup('media_popup285')">
     <img src="../../Ressources/img/movies/Каскадери.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Каскадери</p>
 </div>
 <div class="movies_boxes286" onclick="openMediaPopup('media_popup286')">
     <img src="../../Ressources/img/movies/Аргайл_Супершпіон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Аргайл Супершпіон</p>
 </div>
 <div class="movies_boxes287" onclick="openMediaPopup('media_popup287')">
     <img src="../../Ressources/img/movies/Идеальный_побег.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Ідеальна втеча</p>
 </div>
 <div class="movies_boxes288" onclick="openMediaPopup('media_popup288')">
     <img src="../../Ressources/img/movies/Петля_часу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Петля часу</p>
 </div>
 <div class="movies_boxes289" onclick="openMediaPopup('media_popup289')">
     <img src="../../Ressources/img/movies/Смертельная_гонка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Смертельная гонка</p>
 </div>
 <div class="movies_boxes290" onclick="openMediaPopup('media_popup290')">
     <img src="../../Ressources/img/movies/Вампірши.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Вампірши</p>
 </div>
 <div class="movies_boxes291" onclick="openMediaPopup('media_popup291')">
     <img src="../../Ressources/img/movies/Любой_ценой.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Будь-якою ціною</p>
 </div>
 <div class="movies_boxes292" onclick="openMediaPopup('media_popup292')">
     <img src="../../Ressources/img/movies/Рекрут.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Рекрут</p>
 </div>
 <div class="movies_boxes293" onclick="openMediaPopup('media_popup293')">
     <img src="../../Ressources/img/movies/Семь_психопатов.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Сім Психопатів</p>
 </div>
 <div class="movies_boxes294" onclick="openMediaPopup('media_popup294')">
     <img src="../../Ressources/img/movies/Ліга_справедливості.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Ліга справедливості</p>
 </div>
 <div class="movies_boxes295" onclick="openMediaPopup('media_popup295')">
     <img src="../../Ressources/img/movies/Двойник.2013.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Двійник</p>
 </div>
 <div class="movies_boxes296" onclick="openMediaPopup('media_popup296')">
     <img src="../../Ressources/img/movies/Искуство_самообороны.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Мистецтво Самооборони</p>
 </div>
 <div class="movies_boxes297" onclick="openMediaPopup('media_popup297')">
     <img src="../../Ressources/img/movies/Успеть_за_30_минут.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Встигнути за 30 хвилин</p>
 </div>
 <div class="movies_boxes298" onclick="openMediaPopup('media_popup298')">
     <img src="../../Ressources/img/movies/Обитель_зла.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Обитель зла</p>
 </div>
 <div class="movies_boxes299" onclick="openMediaPopup('media_popup299')">
     <img src="../../Ressources/img/movies/Киану.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Кіану</p>
 </div>
 <div class="movies_boxes300" onclick="openMediaPopup('media_popup300')">
     <img src="../../Ressources/img/movies/Ван_Хельсинг.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Ван Хельсинг</p>
 </div>
 <div class="movies_boxes301" onclick="openMediaPopup('media_popup301')">
     <img src="../../Ressources/img/movies/Віллі_Вонка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Віллі Вонка</p>
 </div>
 <div class="movies_boxes302" onclick="openMediaPopup('media_popup302')">
     <img src="../../Ressources/img/movies/Особо_опасен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Особливо Небезпечний</p>
 </div>
 <div class="movies_boxes303" onclick="openMediaPopup('media_popup303')">
     <img src="../../Ressources/img/movies/Планета_страха.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Планета страху</p>
 </div>
 <div class="movies_boxes304" onclick="openMediaPopup('media_popup304')">
     <img src="../../Ressources/img/movies/Старикам_тут_не_место.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Старикам тут не місце</p>
 </div>
 <div class="movies_boxes305" onclick="openMediaPopup('media_popup305')">
     <img src="../../Ressources/img/movies/В_поисках_тела.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">У пошуках тіла</p>
 </div>
 <div class="movies_boxes306" onclick="openMediaPopup('media_popup306')">
     <img src="../../Ressources/img/movies/Остин_Пауерс.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Остін Пауерс</p>
 </div>
 <div class="movies_boxes307" onclick="openMediaPopup('media_popup307')">
     <img src="../../Ressources/img/movies/Покажи_мне_призрака.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Покажи Мені Примара</p>
 </div>
 <div class="movies_boxes308" onclick="openMediaPopup('media_popup308')">
     <img src="../../Ressources/img/movies/Не_нажимай.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Не нажимай</p>
 </div>
 <div class="movies_boxes309" onclick="openMediaPopup('media_popup309')">
     <img src="../../Ressources/img/movies/Заброшенный_дом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Занедбаний Дім</p>
 </div>
 <div class="movies_boxes310" onclick="openMediaPopup('media_popup310')">
     <img src="../../Ressources/img/movies/Искаженний_дом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Спотворений будинок</p>
 </div>
 <div class="movies_boxes311" onclick="openMediaPopup('media_popup311')">
     <img src="../../Ressources/img/movies/Мимикрия.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Мімікрія</p>
 </div>
 <div class="movies_boxes312" onclick="openMediaPopup('media_popup312')">
     <img src="../../Ressources/img/movies/Призрачная_станція.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Призрачная станція</p>
 </div>
 <div class="movies_boxes313" onclick="openMediaPopup('media_popup313')">
     <img src="../../Ressources/img/movies/Призрачний_дом.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Призрачний будинок</p>
 </div>
 <div class="movies_boxes314" onclick="openMediaPopup('media_popup314')">
     <img src="../../Ressources/img/movies/Поймай_меня_если_сможешь.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Злови Мене Якщо Зможеш</p>
 </div>
 <div class="movies_boxes315" onclick="openMediaPopup('media_popup315')">
     <img src="../../Ressources/img/movies/Смерть_на_Аляске.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Смерть на Алясці</p>
 </div>
 <div class="movies_boxes316" onclick="openMediaPopup('media_popup316')">
     <img src="../../Ressources/img/movies/Кожа.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Шкіра</p>
 </div>
 <div class="movies_boxes317" onclick="openMediaPopup('media_popup317')">
     <img src="../../Ressources/img/movies/Хелбой.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Хелбой</p>
 </div>
 <div class="movies_boxes318" onclick="openMediaPopup('media_popup318')">
     <img src="../../Ressources/img/movies/Хищные_птицы.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Хижі птахи. Харлі Квін</p>
 </div>
 <div class="movies_boxes319" onclick="openMediaPopup('media_popup319')">
     <img src="../../Ressources/img/movies/В_упор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">В упор</p>
 </div>
 <div class="movies_boxes320" onclick="openMediaPopup('media_popup320')">
     <img src="../../Ressources/img/movies/Расправа.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Розправа</p>
 </div>
 <div class="movies_boxes321" onclick="openMediaPopup('media_popup321')">
     <img src="../../Ressources/img/movies/Отряд_Призрак.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Загін Привид</p>
 </div>
 <div class="movies_boxes322" onclick="openMediaPopup('media_popup322')">
     <img src="../../Ressources/img/movies/Охота_на_короля.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Охота на короля</p>
 </div>
 <div class="movies_boxes323" onclick="openMediaPopup('media_popup323')">
     <img src="../../Ressources/img/movies/Телохранитель_киллера.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Охоронець Кіллера</p>
 </div>
 <div class="movies_boxes324" onclick="openMediaPopup('media_popup324')">
     <img src="../../Ressources/img/movies/Гарфілд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Гарфілд</p>
 </div>
 <div class="movies_boxes325" onclick="openMediaPopup('media_popup325')">
     <img src="../../Ressources/img/movies/Бегущий_по_лезвию_2049.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Той, що біжить по лезу</p>
 </div>
 <div class="movies_boxes326" onclick="openMediaPopup('media_popup326')">
     <img src="../../Ressources/img/movies/Кримінальний_город.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Кримінальне місто</p>
 </div>
 <div class="movies_boxes327" onclick="openMediaPopup('media_popup327')">
     <img src="../../Ressources/img/movies/Оппенгеймер.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Оппенгеймер</p>
 </div>
 <div class="movies_boxes328" onclick="openMediaPopup('media_popup328')">
     <img src="../../Ressources/img/movies/Анчартед.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Анчартед</p>
 </div>
 <div class="movies_boxes329" onclick="openMediaPopup('media_popup329')">
     <img src="../../Ressources/img/movies/День_курка.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">День курка</p>
 </div>
 <div class="movies_boxes330" onclick="openMediaPopup('media_popup330')">
     <img src="../../Ressources/img/movies/Правдивая_ложь.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Правдива Брехня</p>
 </div>
 <div class="movies_boxes331" onclick="openMediaPopup('media_popup331')">
     <img src="../../Ressources/img/movies/Скот_Пілігрим.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Скот Пілігрим</p>
 </div>
 <div class="movies_boxes332" onclick="openMediaPopup('media_popup332')">
     <img src="../../Ressources/img/movies/Всё_везде_и_сразу.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Все всюди і відразу</p>
 </div>
 <div class="movies_boxes333" onclick="openMediaPopup('media_popup333')">
     <img src="../../Ressources/img/movies/Братья_из_Гримсби_(2016).webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Брати з Грімсбі</p>
 </div>
 <div class="movies_boxes334" onclick="openMediaPopup('media_popup334')">
     <img src="../../Ressources/img/movies/Больше_Бена.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Більше Бена</p>
 </div>
 <div class="movies_boxes335" onclick="openMediaPopup('media_popup335')">
     <img src="../../Ressources/img/movies/Парк_снова_17.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Батьку знову 17</p>
 </div>
 <div class="movies_boxes336" onclick="openMediaPopup('media_popup336')">
     <img src="../../Ressources/img/movies/Телепорт.jpg" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Телепорт</p>
 </div>
 <div class="movies_boxes337" onclick="openMediaPopup('media_popup337')">
     <img src="../../Ressources/img/movies/Зомбі_по_імені_Шон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Зомбі по імені Шон</p>
 </div>
 <div class="movies_boxes371" onclick="openMediaPopup('media_popup371')">
     <img src="../../Ressources/img/movies/Хотабич.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Хотабич</p>
 </div>
 <div class="movies_boxes338" onclick="openMediaPopup('media_popup338')">
     <img src="../../Ressources/img/movies/Призрачний_патруль.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Примарний патруль</p>
 </div>
 <div class="movies_boxes339" onclick="openMediaPopup('media_popup339')">
     <img src="../../Ressources/img/movies/Scooby-Doo.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Скубі-Ду</p>
 </div>
 <div class="movies_boxes340" onclick="openMediaPopup('media_popup340')">
     <img src="../../Ressources/img/movies/Містер_Бівень.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Містер Бівень</p>
 </div>
 <div class="movies_boxes341" onclick="openMediaPopup('media_popup341')">
     <img src="../../Ressources/img/movies/Ганстер,_коп_диявол.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Гангстер, коп і диявол</p>
 </div>
 <div class="movies_boxes342" onclick="openMediaPopup('media_popup342')">
     <img src="../../Ressources/img/movies/Чудесний_призрак.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Чудовий привид</p>
 </div>
 <div class="movies_boxes343" onclick="openMediaPopup('media_popup343')">
     <img src="../../Ressources/img/movies/Адреналін.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Адреналін</p>
 </div>
 <div class="movies_boxes344" onclick="openMediaPopup('media_popup344')">
     <img src="../../Ressources/img/movies/Подземелья_дракона.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Підземелля Дракона</p>
 </div>
 <div class="movies_boxes346" onclick="openMediaPopup('media_popup346')">
     <img src="../../Ressources/img/movies/Форсаж1.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Форсаж</p>
 </div>
 <div class="movies_boxes347" onclick="openMediaPopup('media_popup347')">
     <img src="../../Ressources/img/movies/Диктатор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Диктатор</p>
 </div>
 <div class="movies_boxes348" onclick="openMediaPopup('media_popup348')">
     <img src="../../Ressources/img/movies/Брати_Супер_Маріо_в_кіно.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Брати Супер Маріо в кіно</p>
 </div>
 <div class="movies_boxes349" onclick="openMediaPopup('media_popup349')">
     <img src="../../Ressources/img/movies/Плохая_партія.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Погана партія</p>
 </div>
 <div class="movies_boxes350" onclick="openMediaPopup('media_popup350')">
     <img src="../../Ressources/img/movies/Сайлент_Хілл.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Сайлент Хілл</p>
 </div>
 <div class="movies_boxes351" onclick="openMediaPopup('media_popup351')">
     <img src="../../Ressources/img/movies/Рая_та_останній_дракон.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Рая та останній дракон</p>
 </div>
 <div class="movies_boxes352" onclick="openMediaPopup('media_popup352')">
     <img src="../../Ressources/img/movies/Кунг_Фу_Панда.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Кунг Фу Панда</p>
 </div>
 <div class="movies_boxes353" onclick="openMediaPopup('media_popup353')">
     <img src="../../Ressources/img/movies/Шрек.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Шрек</p>
 </div>
 <div class="movies_boxes354" onclick="openMediaPopup('media_popup354')">
     <img src="../../Ressources/img/movies/Гнев_человеческий_(постер).webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Гнів Людський</p>
 </div>
 <div class="movies_boxes355" onclick="openMediaPopup('media_popup355')">
     <img src="../../Ressources/img/movies/Астерікс_і_Обелікс.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Астерікс і Обелікс</p>
 </div>
 <div class="movies_boxes356" onclick="openMediaPopup('media_popup356')">
     <img src="../../Ressources/img/movies/Шазам.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Шазам</p>
 </div>
 <div class="movies_boxes357" onclick="openMediaPopup('media_popup357')">
     <img src="../../Ressources/img/movies/Винни-Пух._Кровь_и_мёд.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Вінні-Пух. Кров і мед</p>
 </div>
 <div class="movies_boxes358" onclick="openMediaPopup('media_popup358')">
     <img src="../../Ressources/img/movies/Логово.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Логово</p>
 </div>
 <div class="movies_boxes359" onclick="openMediaPopup('media_popup359')">
     <img src="../../Ressources/img/movies/Хардкор.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Хардкор</p>
 </div>
 <div class="movies_boxes360" onclick="openMediaPopup('media_popup360')">
     <img src="../../Ressources/img/movies/Тот_кто_сидит_внутри.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Той Хто Сидить Усередині</p>
 </div>
 <div class="movies_boxes361" onclick="openMediaPopup('media_popup361')">
     <img src="../../Ressources/img/movies/Меню.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Меню</p>
 </div>
 <div class="movies_boxes362" onclick="openMediaPopup('media_popup362')">
     <img src="../../Ressources/img/movies/Чорний_Адам_-_постер_2022.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating4"></div>
+    <p class="p_text_media">Чорний Адам</p>
 </div>
 <div class="movies_boxes363" onclick="openMediaPopup('media_popup363')">
     <img src="../../Ressources/img/movies/Хітмен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Хітмен</p>
 </div>
 <div class="movies_boxes364" onclick="openMediaPopup('media_popup364')">
     <img src="../../Ressources/img/movies/Ніхто.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Ніхто</p>
 </div>
 <div class="movies_boxes365" onclick="openMediaPopup('media_popup365')">
     <img src="../../Ressources/img/movies/Єквилибріум.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Еквілібріум</p>
 </div>
 <div class="movies_boxes366" onclick="openMediaPopup('media_popup366')">
     <img src="../../Ressources/img/movies/Кінгсмен.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating1"></div>
+    <p class="p_text_media">Кінгсмен</p>
 </div>
 <div class="movies_boxes367" onclick="openMediaPopup('media_popup367')">
     <img src="../../Ressources/img/movies/Человек_из_Торонто.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating2"></div>
+    <p class="p_text_media">Людина з Торонто</p>
 </div>
 <div class="movies_boxes368" onclick="openMediaPopup('media_popup368')">
     <img src="../../Ressources/img/movies/Затеряний_город.webp" alt="Опис картинки" class="movie_img" loading="lazy">
     <div class="rating3"></div>
+    <p class="p_text_media">Загублене Місто</p>
 </div>
     </div>
 </div>
@@ -1642,9 +2062,9 @@
 <a href="#" id="scrollToTopBtn">
 <div class="image_float">
     <img src="../../Ressources/img/Shinob.gif" alt="Опис картинки">
-    <div class="santa">
+    <!-- <div class="santa">
     <img src="../../Ressources/img/santa.webp" alt="Опис картинки">
-    </div>
+    </div> !-->
 </div>
 <div class="image_float_cloud">
     <img src="../../Ressources/img/cloud.png" alt="Опис картинки">

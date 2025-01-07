@@ -2732,7 +2732,22 @@ body, html {
     flex-wrap: wrap;
     flex-grow: 1;
     flex-basis: 400px;
-}}
+}
+[class^="movies_boxes"] {
+    max-width: 200px; /* Збільшена ширина блоків */
+    height: 300px; /* Збільшена висота блоків */
+    background-color: #333; /* Темний фон для наочності */
+    border-radius: 8px; /* Згладжені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додаємо тінь для ефекту об'єму */
+    transition: transform 0.3s ease; /* Анімація при наведенні */
+    cursor: pointer;
+    background-size: cover; /* Розтягуємо картинку на всю площу блоку */
+    background-position: center; /* Центруємо картинку */
+    background-repeat: no-repeat; /* Забороняємо повторення картинки */
+    overflow: hidden;
+    position: relative; /* Додаємо relative позицію до контейнера */
+}
+}
 /* Загальний стиль для контейнера */
 .media_box {
     display: flex;
@@ -2866,7 +2881,7 @@ body, html {
     flex-wrap: wrap; /* Дозволяє переходити на новий рядок */
     gap: 13px; /* Відстань між блоками */
     justify-content: center; /* Центруємо вміст */
-    align-items: center;
+    align-items: flex-start;
     border: 2px solid orange;
     border-radius: 10px;
     padding: 20px;
@@ -3211,7 +3226,8 @@ h2:hover {
 .favourite-container,
 .favourite-container5,
 .favourite-container2,
-.favourite-container3  {
+.favourite-container3 
+.favourite-container4 {
     margin-bottom: 50px; /* Відступ між заголовком і його вмістом */
 }
 .favourite-title {
@@ -3655,4 +3671,36 @@ h2:hover {
 }
 .h3 {
     font-size: 25px;
+}
+
+.search-input {
+    margin-left: 10px;
+    margin-top: 2px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    border-radius: 4px;
+    width: 250px;
+    position: absolute;
+    right: 5%;
+    background: rgb(110,110,110);
+    background: linear-gradient(180deg, rgba(110,110,110,1) 0%, rgba(255,255,255,1) 5%, rgba(106,231,255,1) 95%, rgba(110,110,110,1) 100%);
+}
+.sort_list {
+    position: absolute;
+    right: 5%;
+    margin-top: 2px;
+    padding: 5px 10px;
+    border: 1px solid red;
+    background: rgb(110,110,110);
+    background: linear-gradient(180deg, rgba(110,110,110,1) 0%, rgba(255,255,255,1) 5%, rgba(106,231,255,1) 95%, rgba(110,110,110,1) 100%);
+}
+.sort_rating {
+    position: absolute;
+    right: 7.5%;
+    margin-top: 2px;
+    padding: 5px 10px;
+    border: 1px solid red;
+    background: rgb(110,110,110);
+    background: linear-gradient(180deg, rgba(110,110,110,1) 0%, rgba(255,255,255,1) 5%, rgba(106,231,255,1) 95%, rgba(110,110,110,1) 100%);
 }
