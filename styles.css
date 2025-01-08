@@ -2734,8 +2734,8 @@ body, html {
     flex-basis: 400px;
 }
 [class^="movies_boxes"] {
-    max-width: 200px; /* Збільшена ширина блоків */
-    height: 300px; /* Збільшена висота блоків */
+    max-width: 196px; /* Збільшена ширина блоків */
+    max-height: 290px; /* Збільшена висота блоків */
     background-color: #333; /* Темний фон для наочності */
     border-radius: 8px; /* Згладжені кути */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Додаємо тінь для ефекту об'єму */
@@ -2752,7 +2752,7 @@ body, html {
 .media_box {
     display: flex;
     max-width: 80%;
-    height: 600px;
+    height: 700px;
     margin: 20px auto;
     gap: 20px;
     justify-content: center;
@@ -2764,17 +2764,21 @@ body, html {
     display: flex;
     flex-direction: column;
     width: 50%;
+    min-width: 500px;
     gap: 10px; /* Відстань між media_top та media_bottom */
     transition: all 0.5s ease;
     height: 100%;
+    min-height: 666px;
 }
 .media_right_box {
     display: flex;
     flex-direction: column;
     width: 50%;
+    min-width: 500px;
     gap: 10px; /* Відстань між media_top та media_bottom */
     transition: all 0.5s ease;
     height: 100%;
+    min-height: 666px;
 }
 
 /* Верхній блок - більший за розміром */
@@ -2848,6 +2852,221 @@ body, html {
 .media_bottom:hover ~ .media_top {
     flex: 1; /* Зменшується до розміру нижнього блоку */
 }
+
+
+
+
+.hover-effect {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Щоб не заважати наведенню */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero {
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.hero1 {
+    transform: translateX(-120%);
+    z-index: 2;
+}
+.hero2 {
+    transform: translateX(-60%);
+}
+.hero3 {
+    transform: scale(1) translateY(120%);
+    z-index: 2;
+}
+.hero4 {
+    transform: translateX(60%);
+}
+.hero5 {
+    transform: translateX(120%);
+}
+.hero6 {
+    transform: translateX(140%);
+}
+.hero7{
+    transform: translateX(-120%);
+    z-index: 2;
+}
+.hero8 {
+    transform: translateX(-60%);
+}
+.hero9 {
+    transform: scale(1) translateY(120%);
+    z-index: 2;
+}
+.hero10 {
+    transform: translateY(-150%);
+}
+.hero11 {
+    transform: translateX(120%);
+}
+.hero12 {
+
+}
+.hero13 {
+
+}
+.hero14 {
+    transform: scale(1) translateY(120%);
+    z-index: 2;
+}
+.hero15 {
+
+}
+.hero16 {
+
+}
+.hero17 {
+
+}
+.hero18 {
+
+}
+.hero19 {
+
+}
+.hero20 {
+
+}
+.hero21 {
+
+}
+.hover-effect:hover .hero-images {
+    opacity: 1;
+}
+
+.hover-effect:hover .hero1 {
+    transform: translateX(-68%) rotateZ(-10deg) scale(1.6) translateY(80px);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero2 {
+    transform: translateX(-20%) rotateZ(-20deg) scale(1.5) translateY(70px);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero3 {
+    transform: scale(1.6) translateX(-7%) translateY(15px);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero4 {
+    transform: translateX(30%) translateY(-70px) rotateZ(10deg);
+    opacity: 1;
+}
+
+.hover-effect:hover .hero5 {
+    transform: translateX(85%) translateY(140px) scale(1.9) rotateZ(10deg);
+    opacity: 1;
+}
+.hover-effect:hover .hero6 {
+    transform: translateX(90%) rotateZ(10deg) scaleX(-1) translateY(300px) scale(2.2);
+    opacity: 1;
+}
+.hover-effect:hover .hero7 {
+    transform: translateX(-60%) rotateZ(-15deg) scale(0.8) translateY(120px);
+    opacity: 1;
+}
+.hover-effect:hover .hero8 {
+    transform: translateX(-20%) rotateZ(-20deg) scale(1.8) translateY(-30px);
+    opacity: 1;
+}
+.hover-effect:hover .hero9 {
+    transform: scale(1.5) translateY(50px);
+    opacity: 1;
+}
+.hover-effect:hover .hero10 {
+    transform: translateX(20%) rotateZ(20deg) translateY(-210px) scale(0.8); 
+    opacity: 1;
+}
+.hover-effect:hover .hero11 {
+    transform: translateX(90%) rotateZ(20deg) scaleX(-1) translateY(300px) scale(1.7);
+    opacity: 1;
+}
+.hover-effect:hover .hero12 {
+    transform: translateX(-77%) rotateZ(-10deg) scale(0.8) translateY(150px);
+    opacity: 1;
+    z-index: 2;
+}
+.hover-effect:hover .hero13 {
+    transform: translateX(-30%) rotateZ(-20deg) scale(1.4) translateY(-30px);
+    opacity: 1;
+}
+.hover-effect:hover .hero14 {
+    transform: scale(2.9) translateX(-5%) scaleX(-1) translateY(20px);
+    opacity: 1;
+}
+.hover-effect:hover .hero15 {
+    transform: translateX(65%) translateY(10px) scale(1.9) rotateZ(10deg);
+    opacity: 1;
+}
+.hover-effect:hover .hero16 {
+    transform: translateX(70%) rotateZ(10deg) scaleX(-1) translateY(100px) scale(0.8);
+    opacity: 1;
+}
+.hover-effect:hover .hero17 {
+    transform: translateX(-60%) rotateZ(-10deg) scale(1.7) translateY(20px);
+    opacity: 1;
+    z-index: 2;
+}
+.hover-effect:hover .hero18 {
+    transform: translateX(-30%) rotateZ(-10deg) scale(1.4) translateY(-20px);
+    opacity: 1;
+}
+.hover-effect:hover .hero19 {
+    transform: scale(1.8) translateX(0%) translateY(65px);
+    opacity: 1;
+    z-index: 2;
+}
+.hover-effect:hover .hero20 {
+    transform: translateX(85%) translateY(-180px) scale(2.5) rotateZ(-10deg);
+    opacity: 1;
+}
+.hover-effect:hover .hero21 {
+    transform: translateX(70%) rotateZ(5deg) scaleX(-1) translateY(100px) scale(1.5);
+    opacity: 1;
+}
+.media_H1 {
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    bottom: 0;
+    margin-bottom: 10px;
+    left: 50%;
+    translate: -50%;
+}
+
+
 .fa-solid {
     color: orangered;
 }
