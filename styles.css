@@ -3663,6 +3663,9 @@ h2:hover {
     margin-bottom: 20px;
     margin-top: 5px;
 }
+.center_image_specs1 {
+    pointer-events: none;
+}
 .f12345 {
     display: flex;
     flex-wrap: wrap;
